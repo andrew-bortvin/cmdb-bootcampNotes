@@ -2,8 +2,6 @@
 ottrpal::set_knitr_image_path()
 ```
 
-# Python 
-
 ## Built-In Functions and Methods 
 
 ### Functions

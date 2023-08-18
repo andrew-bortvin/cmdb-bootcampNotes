@@ -2,8 +2,6 @@
 ottrpal::set_knitr_image_path()
 ```
 
-# Python 
-
 ## Modules 
 
 Often, we need to make use of functions beyond the basic ones in Python. To do this, we can import a **module**, or a collection of pre-written functions. A module is imported with the following syntax:

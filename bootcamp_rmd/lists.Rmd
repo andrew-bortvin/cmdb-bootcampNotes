@@ -2,8 +2,6 @@
 ottrpal::set_knitr_image_path()
 ```
 
-# Python 
-
 ## Lists 
 
 Lists allow us to store multiple objects together.
