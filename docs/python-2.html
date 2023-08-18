@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>2 Python Cheat Sheet | CMDB Bootcamp</title>
+  <title>6 Python | CMDB Bootcamp</title>
   <meta name="description" content="Description of Course" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="2 Python Cheat Sheet | CMDB Bootcamp" />
+  <meta property="og:title" content="6 Python | CMDB Bootcamp" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="2 Python Cheat Sheet | CMDB Bootcamp" />
+  <meta name="twitter:title" content="6 Python | CMDB Bootcamp" />
   
   <meta name="twitter:description" content="Description of Course" />
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="assets/peppa.png" type="image/x-icon" />
-<link rel="prev" href="index.html"/>
-<link rel="next" href="the-unix-shell.html"/>
+<link rel="prev" href="math.html"/>
+<link rel="next" href="comparisons-1.html"/>
 <script src="libs/header-attrs-2.10/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -268,80 +268,8 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="python-cheat-sheet" class="section level1" number="2">
-<h1><span class="header-section-number">2</span> Python Cheat Sheet</h1>
-<div id="mathematics" class="section level3" number="2.0.1">
-<h3><span class="header-section-number">2.0.1</span> Mathematics</h3>
-<ul>
-<li><code>+</code> and <code>-</code>: addition and subtraction</li>
-<li><code>*</code> and <code>/</code>: multiplication and division</li>
-<li><code>**</code>: exponentials</li>
-</ul>
-</div>
-<div id="comparisons" class="section level3" number="2.0.2">
-<h3><span class="header-section-number">2.0.2</span> Comparisons</h3>
-<ul>
-<li><code>&lt;</code> and <code>&gt;</code>: greater than, less than</li>
-<li><code>&lt;=</code> and <code>&gt;=</code>: greater than or equal to, less than or equal to</li>
-</ul>
-</div>
-<div id="string-methods" class="section level3" number="2.0.3">
-<h3><span class="header-section-number">2.0.3</span> String Methods</h3>
-<ul>
-<li><code>.upper()</code> and <code>.lower()</code>: Convert string to upper or lower case</li>
-<li><code>.split()</code>: Split a string on a delimiter into a list</li>
-<li><code>.join()</code>: Convert a list into a string using a delimiter</li>
-<li><code>.rstrip()</code>, <code>.lstrip()</code>, and <code>.strip()</code>: Remove unwanted characters from the right side, left side, or both sides of a string</li>
-</ul>
-</div>
-<div id="type-conversion" class="section level3" number="2.0.4">
-<h3><span class="header-section-number">2.0.4</span> Type Conversion</h3>
-<ul>
-<li><code>float()</code>: Convert data to float</li>
-<li><code>int()</code>: Convert data to an integer</li>
-<li><code>str()</code>: Convert data to a string</li>
-</ul>
-</div>
-<div id="working-with-files" class="section level3" number="2.0.5">
-<h3><span class="header-section-number">2.0.5</span> Working with Files</h3>
-<ul>
-<li><code>open(file, mode)</code>: Most common modes are: (<code>r</code>), write (<code>w</code>), append (<code>a</code>)</li>
-<li><code>.readlines()</code>: Return a list where each element is a line from the input file</li>
-<li><code>.close()</code>: Close the file</li>
-</ul>
-</div>
-<div id="list-methods" class="section level3" number="2.0.6">
-<h3><span class="header-section-number">2.0.6</span> List methods</h3>
-<ul>
-<li><code>.append()</code>: Add an element to the end of a list</li>
-</ul>
-</div>
-<div id="numpy" class="section level3" number="2.0.7">
-<h3><span class="header-section-number">2.0.7</span> <code>Numpy</code></h3>
-<ul>
-<li><code>loadtxt()</code>: Import a file</li>
-<li><code>array.shape</code>: Return the number of rows and columns of a <code>numpy</code> array object</li>
-<li><code>np.mean()</code>: Return the mean of an array. Can use the <code>axis</code> argument for row and column means</li>
-<li><code>np.std()</code>: Return the standard deviation of an array. Can use the <code>axis</code> argument for row and column standard deviations</li>
-<li><code>np.max()</code>: Return the maximum value of an array. Can be used with <code>axis</code></li>
-<li><code>np.min()</code>: Return the minimum value of an array. Can be used with <code>axis</code></li>
-</ul>
-</div>
-<div id="plotting" class="section level3" number="2.0.8">
-<h3><span class="header-section-number">2.0.8</span> Plotting</h3>
-<ul>
-<li><code>plt.subplots()</code>: Initialize a figure with at least one subplot</li>
-<li><code>.scatter()</code>: Create a scatter plot</li>
-<li><code>.plot()</code>: Create a line plot</li>
-<li><code>.his()</code>: Create a histogram</li>
-<li><code>.legend()</code>: Add a legend to your figure</li>
-<li><code>.set_xlabel()</code> and <code>ax.set_ylabel()</code>: Set x and y labels for a subplot</li>
-<li><code>.set_title()</code>: Set a title for a subplot</li>
-<li><code>.set_xlim()</code> and <code>.set_ylim()</code>: Set x and y limits for a subplot</li>
-<li><code>plt.show()</code>: Display plot</li>
-</ul>
-
-</div>
+<div id="python-2" class="section level1" number="6">
+<h1><span class="header-section-number">6</span> Python</h1>
 </div>
 <hr>
 <center> 
@@ -356,8 +284,8 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="the-unix-shell.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="math.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="comparisons-1.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
