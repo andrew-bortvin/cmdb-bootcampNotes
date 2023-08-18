@@ -1,9 +1,6 @@
 ```{r, include = FALSE}
 ottrpal::set_knitr_image_path()
 ```
-
-# Python 
-
 ## For Loops 
 
 In Python, we will often want to perform an action more than once. For example, if we have a list, we might want to do the same operatation on every item within the list.

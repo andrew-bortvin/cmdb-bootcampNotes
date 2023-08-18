@@ -1,9 +1,6 @@
 ```{r, include = FALSE}
 ottrpal::set_knitr_image_path()
 ```
-
-# Python 
-
 ## Comparisons 
 
 In Python, comparisons will always return a Boolean, i.e. either `True` or `False.` We can use the following syntax to compare values:

@@ -2,8 +2,6 @@
 ottrpal::set_knitr_image_path()
 ```
 
-# Python 
-
 ## Numpy 
 
 Numpy is a Python library used for manipulating arrays and performing mathematical operations on matrices. For concision, we will import the `numpy` module with the name `np`, as such:
