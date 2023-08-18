@@ -844,7 +844,7 @@ ax.hist(temperatureBaltimore, bins = 20)
 
 <img src="img/allBaltimoresBins.png" title="Temperature in all Baltimores" alt="Histogram of temperature in every town named Baltimore" style="display: block; margin: auto;" />
 
-
+test
 
 
 
