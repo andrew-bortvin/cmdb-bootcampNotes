@@ -63,5 +63,11 @@ figure-aesthetics
 histograms
 errors
 git
-tracking-changes
-ignoring-things
+introduction-to-git-and-github-for-beginners
+what-is-git
+what-is-github
+pipeline-for-this-semester
+key-concepts
+creating-your-files
+sending-your-files-to-github
+learning-more
