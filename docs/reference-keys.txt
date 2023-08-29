@@ -10,10 +10,6 @@ working-with-files
 list-methods
 numpy
 plotting
-the-unix-shell
-introducing-the-shell
-navigating-files-and-directories
-working-with-files-and-directories
 python
 data-types
 variables
