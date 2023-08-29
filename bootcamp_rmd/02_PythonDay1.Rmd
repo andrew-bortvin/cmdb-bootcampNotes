@@ -822,9 +822,9 @@ I've found 25 towns worldwide named Baltimore. Here are their current temperatur
 temperatureBaltimore = [69, 83, 82, 90, 77, 89, 82, 67, 59, 86, 74, 77, 58, 67, 62, 91, 73, 81, 67, 87, 61, 67, 61, 108, 112]
 ```
 
-To generate a histogram, we use the `.hist()` method. By default, this method takes just one argument - the data that you wish to plot. 
+To generate a histogram, we use the `.hist()` method. By default, this method takes just one argument: the data that you wish to plot. 
 
-```{r, engine='pyhton', eval=FALSE}
+```{r, engine='python', eval=FALSE}
 fig, ax = plt.subplots()
 ax.hist(temperatureBaltimore)
 ax.set_xlabel('Temperature (F)')
@@ -837,7 +837,7 @@ plt.show()
 
 One important argument for the `.hist()` method is `bins`, which allows us to set how many groups our data is divided into. The more bins there are, the fewer x values will be contained within a single bin. For example, plotting the Baltimore data with a larger number of bins: 
 
-```{r, engine='pyhton', eval=FALSE}
+```{r, engine='python', eval=FALSE}
 ax.hist(temperatureBaltimore, bins = 20)
 ```
 
