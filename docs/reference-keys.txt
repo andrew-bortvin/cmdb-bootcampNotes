@@ -39,6 +39,8 @@ adding-to-lists
 for-loops
 for-loop-walkthrough
 repeating-an-action-n-times
+while-loops
+infinite-loops
 reading-in-data
 parsing-a-file
 parsing-with-a-for-loop

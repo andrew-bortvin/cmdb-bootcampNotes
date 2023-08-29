@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>4.6 Type Conversion | CMDB Bootcamp</title>
+  <title>4.10 While Loops | CMDB Bootcamp</title>
   <meta name="description" content="Description of Course" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="4.6 Type Conversion | CMDB Bootcamp" />
+  <meta property="og:title" content="4.10 While Loops | CMDB Bootcamp" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="4.6 Type Conversion | CMDB Bootcamp" />
+  <meta name="twitter:title" content="4.10 While Loops | CMDB Bootcamp" />
   
   <meta name="twitter:description" content="Description of Course" />
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="assets/peppa.png" type="image/x-icon" />
-<link rel="prev" href="built-in-functions-and-methods.html"/>
-<link rel="next" href="string-methods-1.html"/>
+<link rel="prev" href="for-loops.html"/>
+<link rel="next" href="reading-in-data.html"/>
 <script src="libs/header-attrs-2.10/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -242,35 +242,28 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="type-conversion-1" class="section level2" number="4.6">
-<h2><span class="header-section-number">4.6</span> Type Conversion</h2>
-<p>Sometimes, data can be converted from one type to another.</p>
-<ul>
-<li><code>float()</code> - converts integers and strings (when appropriate) to floats</li>
-</ul>
-<div class="sourceCode" id="cb33"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb33-1"><a href="type-conversion-1.html#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">float</span>(<span class="dv">3</span>))</span>
-<span id="cb33-2"><a href="type-conversion-1.html#cb33-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">float</span>(<span class="st">&quot;2.57&quot;</span>))</span></code></pre></div>
-<div class="sourceCode" id="cb34"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb34-1"><a href="type-conversion-1.html#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fl">3.0</span></span>
-<span id="cb34-2"><a href="type-conversion-1.html#cb34-2" aria-hidden="true" tabindex="-1"></a><span class="fl">2.57</span></span></code></pre></div>
-<ul>
-<li><code>int()</code>converts floats and strings into integers. Note that this function always rounds down if necessary. An exception here: <code>int()</code> <strong>does not</strong> allow you to convert a string with a decimal point into an integer - <code>int("3.62")</code> will throw an error.</li>
-</ul>
-<div class="sourceCode" id="cb35"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb35-1"><a href="type-conversion-1.html#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">int</span>(<span class="st">&#39;3&#39;</span>))</span>
-<span id="cb35-2"><a href="type-conversion-1.html#cb35-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">int</span>(<span class="fl">2.57</span>))</span></code></pre></div>
-<div class="sourceCode" id="cb36"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb36-1"><a href="type-conversion-1.html#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="dv">3</span></span>
-<span id="cb36-2"><a href="type-conversion-1.html#cb36-2" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span></span></code></pre></div>
-<p>Note that for the above functions, it is not always possible to do convert data into a different type. In particular, strings with non-numeric characters cause problems - <code>int("Dachshund")</code> will not work.</p>
-<ul>
-<li><code>str()</code> converts all other data types into strings.</li>
-</ul>
-<div class="sourceCode" id="cb37"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb37-1"><a href="type-conversion-1.html#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">str</span>(<span class="dv">3</span>))</span>
-<span id="cb37-2"><a href="type-conversion-1.html#cb37-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">str</span>(<span class="fl">2.57</span>))</span>
-<span id="cb37-3"><a href="type-conversion-1.html#cb37-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">str</span>(<span class="va">True</span>))</span></code></pre></div>
-<div class="sourceCode" id="cb38"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb38-1"><a href="type-conversion-1.html#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="co">&#39;3&#39;</span></span>
-<span id="cb38-2"><a href="type-conversion-1.html#cb38-2" aria-hidden="true" tabindex="-1"></a><span class="co">&#39;2.57&#39;</span></span>
-<span id="cb38-3"><a href="type-conversion-1.html#cb38-3" aria-hidden="true" tabindex="-1"></a><span class="co">&#39;True&#39;</span></span></code></pre></div>
-<p>A special case of type conversions comes with <code>booleans</code>. Numeric values are <strong>automatically converted</strong> into <code>booleans</code>. <code>0</code> is equivalent to <code>False</code>. <strong>All</strong> non-zero numeric values are equivalent to <code>True</code>. Likewise, empty strings (<code>''</code>) convert to <code>False</code>. All non-empty strings (inlcuding the string <code>'False'</code>) convert to <code>True</code>.</p>
+<div id="while-loops" class="section level2" number="4.10">
+<h2><span class="header-section-number">4.10</span> While Loops</h2>
+<p>Like a <code>for</code> loop, a <code>while</code> loop is a way of repeatedly performing an action. However, whereas a <code>for</code> loop runs a code block a set number of times, a <code>while</code> loop runs the block until a specific condition is met.</p>
+<p>A <code>while</code> loop is structured like this:</p>
+<pre><code>while &lt;condition&gt;:
+    {do something}</code></pre>
+<p>The condition can be any expression that can be evaluated as a Boolean (<code>True</code> or <code>False</code>) - in particular the comparison operators (<code>==</code>, <code>&lt;</code>, <code>&gt;</code>, etc.) are often used here. For example:</p>
+<div class="sourceCode" id="cb84"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb84-1"><a href="while-loops.html#cb84-1" aria-hidden="true" tabindex="-1"></a>myString <span class="op">=</span> <span class="st">&quot;A&quot;</span></span>
+<span id="cb84-2"><a href="while-loops.html#cb84-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb84-3"><a href="while-loops.html#cb84-3" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> <span class="bu">len</span>(myString) <span class="op">&lt;=</span> <span class="dv">10</span>:</span>
+<span id="cb84-4"><a href="while-loops.html#cb84-4" aria-hidden="true" tabindex="-1"></a>  myString <span class="op">=</span> myString <span class="op">+</span> <span class="st">&quot;AAAA&quot;</span></span>
+<span id="cb84-5"><a href="while-loops.html#cb84-5" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(myString)</span></code></pre></div>
+<div id="infinite-loops" class="section level3" number="4.10.1">
+<h3><span class="header-section-number">4.10.1</span> Infinite Loops</h3>
+<p>Because a <code>while</code> loop runs an undetermined number times, it is possible to write a statement that runs forever without ending. Consider the following block of code:</p>
+<div class="sourceCode" id="cb85"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb85-1"><a href="while-loops.html#cb85-1" aria-hidden="true" tabindex="-1"></a>myNumber <span class="op">=</span> <span class="dv">1</span> </span>
+<span id="cb85-2"><a href="while-loops.html#cb85-2" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> myNumber <span class="op">&gt;</span> <span class="dv">0</span>:</span>
+<span id="cb85-3"><a href="while-loops.html#cb85-3" aria-hidden="true" tabindex="-1"></a>  myNumber <span class="op">=</span> myNumber <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb85-4"><a href="while-loops.html#cb85-4" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(myNumber)</span></code></pre></div>
+<p>Here, the number starts at 1 (which is greater than 0) and only ever grows larger. The statement <code>myNumber &gt; 0</code> will remain true with every iteration of the loop, and the loop will never break.</p>
 
+</div>
 </div>
 <hr>
 <center> 
@@ -285,8 +278,8 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="built-in-functions-and-methods.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="string-methods-1.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="for-loops.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="reading-in-data.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
