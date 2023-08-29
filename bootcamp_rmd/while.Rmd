@@ -25,16 +25,17 @@ while len(myString) <= 10:
 
 ### Infinite Loops
 
-Because a `while` loop runs an undetermined number times, it is possible to write a statement that runs forever without ending. Consider the following block of code: 
+Because a `while` loop runs an undetermined number times, a common error is an infinite loop, or a `while` loop that never stops running because the condition for termination is never met. Consider the following block of code: 
 
 ```{r, engine='python', eval=FALSE}
 myNumber = 1 
+
 while myNumber > 0:
   myNumber = myNumber + 1
   print(myNumber)
 ```
 
-Here, the number starts at 1 (which is greater than 0) and only ever grows larger. The statement `myNumber > 0` will remain true with every iteration of the loop, and the loop will never break. 
+Here, the number starts at 1 (which is greater than 0) and only ever grows larger. The statement `myNumber > 0` will remain true with every iteration of the loop, and the loop will never terminate, preventing your code from fully executing.
 
 
 
