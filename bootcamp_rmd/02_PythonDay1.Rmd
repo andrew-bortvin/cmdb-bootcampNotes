@@ -697,7 +697,7 @@ We can initialize a figure with the following line:
 fig, ax = plt.subplots()
 ```
 
-This initializes a figure (named `fig`) and a plot within the figure (named `ax`). Having separate variables for the figure and the plot within the figure may seem strange, but it will make it considerably easier to arrange and manipulate multiple subplots within a larger figure. At present, our figure is just am empty canvas: 
+This initializes a figure (named `fig`) and a plot within the figure (named `ax`). Having separate variables for the figure and the plot within the figure may seem strange, but it will make it considerably easier to arrange and manipulate multiple subplots within a larger figure. At present, our figure is just an empty canvas: 
 
 <img src="img/emptyPlot.png" title="Empty Plot" alt="An initialized plot without anything added to it." style="display: block; margin: auto;" />
 
@@ -711,7 +711,7 @@ tempBaltimore = [74, 73, 72, 71, 75, 79, 87]
 tempWommels = [59, 60, 62, 65, 69, 72, 67]
 ```
 
-To plot a set of points, we can use the `.scatter()` method This function takes two mandatory arguments: a list of x coordinates and a list of y coordinates. We can plot the temperature in Baltimore as such: 
+To plot a set of points, we can use the `.scatter()` method. This function takes two mandatory arguments: a list of x coordinates and a list of y coordinates. We can plot the temperature in Baltimore as such: 
 
 ```{r, engine='python', eval=FALSE}
 ax.scatter(hours, tempBaltimore)
@@ -721,9 +721,9 @@ We can display our plot by running the function `plt.show()`. Our plot will look
 
 <img src="img/baltimore.png" title="Baltimore temperatures" alt="A scatter plot of Baltimore temperatures." style="display: block; margin: auto;" />
 
-Note that the `.scatter()` method has a variety of optional arguments that can be used to configure the appearance of your pointts - we will often modify the color (`c`), size (`s`), and shape (`m`) of our points. A full list of options can be found [here](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.scatter.html).
+Note that the `.scatter()` method has a variety of optional arguments that can be used to configure the appearance of your points; we will often modify the color (`c`), size (`s`), and shape (`m`) of our points. A full list of options can be found [here](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.scatter.html).
 
-To add a line, we use the `.plot()` method. Like `.scatter()`, this function takes as arguments lists of x and y positions, and allows for aesthetic customization with a variety of optional parameters.  (for more information on those, look [here](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html)) our plotting code now looks like this: 
+To add a line, we use the `.plot()` method. Like `.scatter()`, this function takes as arguments lists of x and y positions, and allows for aesthetic customization with a variety of optional parameters. For more information on these options, look [here](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html). Our plotting code now looks like this: 
 
 ```{r, engine='python', eval=FALSE}
 import matplotlib.pyplot as plt
@@ -763,16 +763,15 @@ plt.show()
 
 A couple things are interesting about this plot: 
 
-* The y axis scale adjust automatically to fit in Wommels. 
+* The y axis scale adjusts automatically to fit in Wommels. 
 * The second time that we call the `.scatter()` and `.plot()` functions, they automatically plot in a new color. If we were to add a third set of points, they would again be in a new color. 
 
 #### Labels and Legends
 
-To an observe, our plot is a bit confusing because it is unclear which line represents Wommels and which line represents Baltimore. We could clarify this by adding a legend. There are two steps to doing this: 
+To an observer, our plot is a bit confusing because it is unclear which line represents Wommels and which line represents Baltimore. We could clarify this by adding a legend. There are two steps to doing this: 
 
-1. We need to use the optional `label` argument. This argument lets the interpreter how to label a line or set of points in the legend. For example, we can label a set of points as such: `ax.scatter(hours, tempBaltimore, label='Baltimore')`. In this example, we can label either the scatter plots or the line plots.
-2. Create a legend using the `.legend()` method
-
+1. We need to use the optional `label` argument. This argument tells the interpreter how to label a line or set of points in the legend. For example, we can label a set of points as such: `ax.scatter(hours, tempBaltimore, label='Baltimore')`. In this example, we can label either the scatter plots or the line plots.
+2. Create a legend using the `.legend()` method.
 
 ```{r, engine='python', eval=FALSE}
 fig, ax = plt.subplots()
@@ -803,7 +802,7 @@ We can set a title as such:
 ax.set_title('Temperature in Baltimore and Wommels')
 ```
 
-If we wanted to set custom limits for our x and ylimits, we can use the `set_xlim()` and `set_ylim()` methods: 
+If we wanted to set custom limits for our x and y limits, we can use the `set_xlim()` and `set_ylim()` methods: 
 
 ```{r, engine='python', eval=FALSE}
 ax.set_ylim(50, 100)
@@ -823,9 +822,9 @@ I've found 25 towns worldwide named Baltimore. Here are their current temperatur
 temperatureBaltimore = [69, 83, 82, 90, 77, 89, 82, 67, 59, 86, 74, 77, 58, 67, 62, 91, 73, 81, 67, 87, 61, 67, 61, 108, 112]
 ```
 
-To generate a histogram, we use the `.hist()` method. By default, this method takes just one argument - the data that you wish to plot. 
+To generate a histogram, we use the `.hist()` method. By default, this method takes just one argument: the data that you wish to plot. 
 
-```{r, engine='pyhton', eval=FALSE}
+```{r, engine='python', eval=FALSE}
 fig, ax = plt.subplots()
 ax.hist(temperatureBaltimore)
 ax.set_xlabel('Temperature (F)')
@@ -838,13 +837,12 @@ plt.show()
 
 One important argument for the `.hist()` method is `bins`, which allows us to set how many groups our data is divided into. The more bins there are, the fewer x values will be contained within a single bin. For example, plotting the Baltimore data with a larger number of bins: 
 
-```{r, engine='pyhton', eval=FALSE}
+```{r, engine='python', eval=FALSE}
 ax.hist(temperatureBaltimore, bins = 20)
 ```
 
 <img src="img/allBaltimoresBins.png" title="Temperature in all Baltimores" alt="Histogram of temperature in every town named Baltimore" style="display: block; margin: auto;" />
 
-test
 
 
 

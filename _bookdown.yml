@@ -3,7 +3,6 @@ chapter_name: ""
 repo: https://github.com/andrew-bortvin/swcmdb/
 rmd_files: ["index.Rmd",
             "bootcamp_rmd/pythonCheat.Rmd",
-            "bootcamp_rmd/01_Unix.Rmd",
             "bootcamp_rmd/variables.Rmd",
             "bootcamp_rmd/math.Rmd",
             "bootcamp_rmd/comparisons.Rmd",
