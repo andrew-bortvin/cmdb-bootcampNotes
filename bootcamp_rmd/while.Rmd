@@ -1,0 +1,7 @@
+```{r, include = FALSE}
+ottrpal::set_knitr_image_path()
+```
+
+## While Loops 
+
+Like a for loop, a while loop is a way of performing  
