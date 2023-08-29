@@ -1,6 +1,4 @@
-homepage
-instructors
-schedule-logistics
+course-resources
 python-cheat-sheet
 mathematics
 comparisons
