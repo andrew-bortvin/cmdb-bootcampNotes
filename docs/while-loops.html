@@ -256,12 +256,13 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb84-5"><a href="while-loops.html#cb84-5" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(myString)</span></code></pre></div>
 <div id="infinite-loops" class="section level3" number="4.10.1">
 <h3><span class="header-section-number">4.10.1</span> Infinite Loops</h3>
-<p>Because a <code>while</code> loop runs an undetermined number times, it is possible to write a statement that runs forever without ending. Consider the following block of code:</p>
+<p>Because a <code>while</code> loop runs an undetermined number times, a common error is an infinite loop, or a <code>while</code> loop that never stops running because the condition for termination is never met. Consider the following block of code:</p>
 <div class="sourceCode" id="cb85"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb85-1"><a href="while-loops.html#cb85-1" aria-hidden="true" tabindex="-1"></a>myNumber <span class="op">=</span> <span class="dv">1</span> </span>
-<span id="cb85-2"><a href="while-loops.html#cb85-2" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> myNumber <span class="op">&gt;</span> <span class="dv">0</span>:</span>
-<span id="cb85-3"><a href="while-loops.html#cb85-3" aria-hidden="true" tabindex="-1"></a>  myNumber <span class="op">=</span> myNumber <span class="op">+</span> <span class="dv">1</span></span>
-<span id="cb85-4"><a href="while-loops.html#cb85-4" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(myNumber)</span></code></pre></div>
-<p>Here, the number starts at 1 (which is greater than 0) and only ever grows larger. The statement <code>myNumber &gt; 0</code> will remain true with every iteration of the loop, and the loop will never break.</p>
+<span id="cb85-2"><a href="while-loops.html#cb85-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-3"><a href="while-loops.html#cb85-3" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> myNumber <span class="op">&gt;</span> <span class="dv">0</span>:</span>
+<span id="cb85-4"><a href="while-loops.html#cb85-4" aria-hidden="true" tabindex="-1"></a>  myNumber <span class="op">=</span> myNumber <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb85-5"><a href="while-loops.html#cb85-5" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(myNumber)</span></code></pre></div>
+<p>Here, the number starts at 1 (which is greater than 0) and only ever grows larger. The statement <code>myNumber &gt; 0</code> will remain true with every iteration of the loop, and the loop will never terminate, preventing your code from fully executing.</p>
 
 </div>
 </div>
