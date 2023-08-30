@@ -67,7 +67,7 @@ When we read in data, **each line is stored as a string**. If we want the interp
 If we read in the data and print it out, it looks like this: 
 
 ```{r, engine = 'python'}
-f = open('number.txt')
+f = open('numbers.txt')
 
 for l in f:
   print(l.strip())
