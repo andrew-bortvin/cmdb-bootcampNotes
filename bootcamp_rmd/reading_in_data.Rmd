@@ -54,6 +54,25 @@ print(f.readlines())
 
 This is more concise than a for loop, but all lines are read in without the manipulations that we can perform line-by-line in our loop.
 
+#### Data Types 
+
+When we read in data, **each line is stored as a string**. If we want the interpreter to known that our data is numeric, we need to convert in manually. For example, consider a file with the following contents: 
+
+```
+4
+12.2
+-9.854
+```
+
+If we read in the data and print it out, it looks like this: 
+
+```{r, engine = 'python'}
+f = open('number.txt')
+
+for l in f:
+  print(l.strip())
+```
+
 #### Closing files
 
 We can close a file with the `.close()` method. To close `insects.txt` (previously saved as the variable `f`), we would run:
