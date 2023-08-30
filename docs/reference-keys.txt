@@ -39,6 +39,7 @@ reading-in-data
 parsing-a-file
 parsing-with-a-for-loop
 parsing-with-readlines
+data-types-1
 closing-files
 modules
 module-functions

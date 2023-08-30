@@ -275,8 +275,24 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <pre><code>## [&#39;Hercules beetle\n&#39;, &#39;Swallowtail\n&#39;, &#39;Ornate mantis\n&#39;, &#39;Weevil\n&#39;, &#39;Pine chaffer\n&#39;]</code></pre>
 <p>This is more concise than a for loop, but all lines are read in without the manipulations that we can perform line-by-line in our loop.</p>
 </div>
-<div id="closing-files" class="section level4" number="3.11.1.3">
-<h4><span class="header-section-number">3.11.1.3</span> Closing files</h4>
+<div id="data-types-1" class="section level4" number="3.11.1.3">
+<h4><span class="header-section-number">3.11.1.3</span> Data Types</h4>
+<p>When we read in data, <strong>each line is stored as a string</strong>. If we want the interpreter to known that our data is numeric, we need to convert in manually. For example, consider a file with the following contents:</p>
+<pre><code>4
+12.2
+-9.854</code></pre>
+<p>If we read in the data and print it out, it looks like this:</p>
+<div class="sourceCode" id="cb92"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb92-1"><a href="reading-in-data.html#cb92-1" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> <span class="bu">open</span>(<span class="st">&#39;numbers.txt&#39;</span>)</span>
+<span id="cb92-2"><a href="reading-in-data.html#cb92-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb92-3"><a href="reading-in-data.html#cb92-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> l <span class="kw">in</span> f:</span>
+<span id="cb92-4"><a href="reading-in-data.html#cb92-4" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(l.strip())</span></code></pre></div>
+<pre><code>## 4
+## 12.2
+## -9.854</code></pre>
+<p>Note that each of these values is being printed as a string. We need to convert to an integer or float to operate on them mathematically.</p>
+</div>
+<div id="closing-files" class="section level4" number="3.11.1.4">
+<h4><span class="header-section-number">3.11.1.4</span> Closing files</h4>
 <p>We can close a file with the <code>.close()</code> method. To close <code>insects.txt</code> (previously saved as the variable <code>f</code>), we would run:</p>
 <p>Once the file is closed, we cannot read it or write to it without opening it again.</p>
 
