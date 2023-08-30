@@ -73,6 +73,8 @@ for l in f:
   print(l.strip())
 ```
 
+Note that each of these values is being printed as a string. We need to convert to an integer or float to operate on them mathematically. 
+
 #### Closing files
 
 We can close a file with the `.close()` method. To close `insects.txt` (previously saved as the variable `f`), we would run:
