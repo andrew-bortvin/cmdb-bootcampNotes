@@ -64,16 +64,31 @@ When we read in data, **each line is stored as a string**. If we want the interp
 -9.854
 ```
 
-If we read in the data and print it out, it looks like this: 
+Let's read in this data and examine its type:
 
 ```{r, engine = 'python'}
 f = open('numbers.txt')
+fileContents = []
 
 for l in f:
-  print(l.strip())
+  fileContents.append(l.strip()))
+  
+print(fileContents)
+print(type(fileContents[1]))
 ```
 
-Note that each of these values is being printed as a string. We need to convert to an integer or float to operate on them mathematically. 
+If we want, to do mathematics using these values, we will get an error. We need to convert to an integer or float to operate on them mathematically: 
+
+```{r, engine = 'python'}
+f = open('numbers.txt')
+fileContents = []
+
+for l in f:
+  fileContents.append(float(l.strip())))
+  
+print(fileContents)
+print(type(fileContents[1]))
+```
 
 #### Closing files
 
