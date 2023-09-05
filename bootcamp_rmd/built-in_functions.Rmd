@@ -4,7 +4,7 @@ ottrpal::set_knitr_image_path()
 
 ## Built-In Functions and Methods 
 
-### Functions
+### Functions {#functions}
 
 A **function** is a block of code that performs a task. Python comes with a substantial set of pre-written functions. 
 
