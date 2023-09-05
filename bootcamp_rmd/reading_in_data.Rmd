@@ -66,12 +66,12 @@ When we read in data, **each line is stored as a string**. If we want the interp
 
 Let's read in this data and examine its type:
 
-```{r, engine = 'python'}
+```{r Reading in and looking at Type, engine = 'python'}
 f = open('numbers.txt')
 fileContents = []
 
 for l in f:
-  fileContents.append(l.strip()))
+  fileContents.append(l.strip())
   
 print(fileContents)
 print(type(fileContents[1]))
@@ -84,7 +84,7 @@ f = open('numbers.txt')
 fileContents = []
 
 for l in f:
-  fileContents.append(float(l.strip())))
+  fileContents.append(float(l.strip()))
   
 print(fileContents)
 print(type(fileContents[1]))
