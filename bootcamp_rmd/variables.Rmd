@@ -27,6 +27,8 @@ Note the second example – `85.3` is a float; `'85.3'` is a string.
 
 **Booleans** have two possible values: `True` and `False`. These can also be expressed as `1` (true) or `0` (false).
 
+We can use the [`type()` function](#built-in_functions) to figure out the data type of an object.
+
 ## Variables
 
 Variables are assigned using the `=` sign:
