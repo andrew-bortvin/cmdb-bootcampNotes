@@ -58,7 +58,6 @@ multiple-sets-of-data
 labels-and-legends
 figure-aesthetics
 histograms
-errors
 git
 introduction-to-git-and-github-for-beginners
 what-is-git

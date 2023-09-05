@@ -30,7 +30,7 @@
   
   <link rel="shortcut icon" href="assets/peppa.png" type="image/x-icon" />
 <link rel="prev" href="numpy-1.html"/>
-<link rel="next" href="errors.html"/>
+<link rel="next" href="git.html"/>
 <script src="libs/header-attrs-2.10/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -205,7 +205,6 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.14.1" data-path="plotting-with-matplotlib.html"><a href="plotting-with-matplotlib.html#line-and-scatter-plots---walkthrough"><i class="fa fa-check"></i><b>3.14.1</b> Line and Scatter Plots - Walkthrough</a></li>
 <li class="chapter" data-level="3.14.2" data-path="plotting-with-matplotlib.html"><a href="plotting-with-matplotlib.html#histograms"><i class="fa fa-check"></i><b>3.14.2</b> Histograms</a></li>
 </ul></li>
-<li class="chapter" data-level="3.15" data-path="errors.html"><a href="errors.html"><i class="fa fa-check"></i><b>3.15</b> Errors</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="git.html"><a href="git.html"><i class="fa fa-check"></i><b>4</b> Git</a>
 <ul>
@@ -239,51 +238,51 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <div id="plotting-with-matplotlib" class="section level2" number="3.14">
 <h2><span class="header-section-number">3.14</span> Plotting with <code>matplotlib</code></h2>
 <p>In this course, we will use the library Matplotlib for plotting. For concision, we will import the <code>matplotlib.pyplot</code> module with the name <code>plt</code>, as such:</p>
-<div class="sourceCode" id="cb111"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb111-1"><a href="plotting-with-matplotlib.html#cb111-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span></code></pre></div>
+<div class="sourceCode" id="cb117"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb117-1"><a href="plotting-with-matplotlib.html#cb117-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span></code></pre></div>
 <div id="line-and-scatter-plots---walkthrough" class="section level3" number="3.14.1">
 <h3><span class="header-section-number">3.14.1</span> Line and Scatter Plots - Walkthrough</h3>
 <p>We can initialize a figure with the following line:</p>
-<div class="sourceCode" id="cb112"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb112-1"><a href="plotting-with-matplotlib.html#cb112-1" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots()</span></code></pre></div>
+<div class="sourceCode" id="cb118"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb118-1"><a href="plotting-with-matplotlib.html#cb118-1" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots()</span></code></pre></div>
 <p>This initializes a figure (named <code>fig</code>) and a plot within the figure (named <code>ax</code>). Having separate variables for the figure and the plot within the figure may seem strange, but it will make it considerably easier to arrange and manipulate multiple subplots within a larger figure. At present, our figure is just an empty canvas:</p>
 <p><img src="img/emptyPlot.png" title="Empty Plot" alt="An initialized plot without anything added to it." style="display: block; margin: auto;" /></p>
 <div id="points-and-lines" class="section level4" number="3.14.1.1">
 <h4><span class="header-section-number">3.14.1.1</span> Points and Lines</h4>
 <p>Let’s add to our subplot by plotting some data. I’ve stored the temperature in Fahrenheit in Baltimore, MD and Wommels, Netherlands for the next seven hours:</p>
-<div class="sourceCode" id="cb113"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb113-1"><a href="plotting-with-matplotlib.html#cb113-1" aria-hidden="true" tabindex="-1"></a>hours <span class="op">=</span> <span class="bu">range</span>(<span class="dv">7</span>)</span>
-<span id="cb113-2"><a href="plotting-with-matplotlib.html#cb113-2" aria-hidden="true" tabindex="-1"></a>tempBaltimore <span class="op">=</span> [<span class="dv">74</span>, <span class="dv">73</span>, <span class="dv">72</span>, <span class="dv">71</span>, <span class="dv">75</span>, <span class="dv">79</span>, <span class="dv">87</span>]</span>
-<span id="cb113-3"><a href="plotting-with-matplotlib.html#cb113-3" aria-hidden="true" tabindex="-1"></a>tempWommels <span class="op">=</span> [<span class="dv">59</span>, <span class="dv">60</span>, <span class="dv">62</span>, <span class="dv">65</span>, <span class="dv">69</span>, <span class="dv">72</span>, <span class="dv">67</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb119"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb119-1"><a href="plotting-with-matplotlib.html#cb119-1" aria-hidden="true" tabindex="-1"></a>hours <span class="op">=</span> <span class="bu">range</span>(<span class="dv">7</span>)</span>
+<span id="cb119-2"><a href="plotting-with-matplotlib.html#cb119-2" aria-hidden="true" tabindex="-1"></a>tempBaltimore <span class="op">=</span> [<span class="dv">74</span>, <span class="dv">73</span>, <span class="dv">72</span>, <span class="dv">71</span>, <span class="dv">75</span>, <span class="dv">79</span>, <span class="dv">87</span>]</span>
+<span id="cb119-3"><a href="plotting-with-matplotlib.html#cb119-3" aria-hidden="true" tabindex="-1"></a>tempWommels <span class="op">=</span> [<span class="dv">59</span>, <span class="dv">60</span>, <span class="dv">62</span>, <span class="dv">65</span>, <span class="dv">69</span>, <span class="dv">72</span>, <span class="dv">67</span>]</span></code></pre></div>
 <p>To plot a set of points, we can use the <code>.scatter()</code> method This function takes two mandatory arguments: a list of x coordinates and a list of y coordinates. We can plot the temperature in Baltimore as such:</p>
-<div class="sourceCode" id="cb114"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb114-1"><a href="plotting-with-matplotlib.html#cb114-1" aria-hidden="true" tabindex="-1"></a>ax.scatter(hours, tempBaltimore)</span></code></pre></div>
+<div class="sourceCode" id="cb120"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb120-1"><a href="plotting-with-matplotlib.html#cb120-1" aria-hidden="true" tabindex="-1"></a>ax.scatter(hours, tempBaltimore)</span></code></pre></div>
 <p>We can display our plot by running the function <code>plt.show()</code>. Our plot will look like this:</p>
 <p><img src="img/baltimore.png" title="Baltimore temperatures" alt="A scatter plot of Baltimore temperatures." style="display: block; margin: auto;" /></p>
 <p>Note that the <code>.scatter()</code> method has a variety of optional arguments that can be used to configure the appearance of your points; we will often modify the color (<code>c</code>), size (<code>s</code>), and shape (<code>m</code>) of our points. A full list of options can be found <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.scatter.html">here</a>.</p>
 <p>To add a line, we use the <code>.plot()</code> method. Like <code>.scatter()</code>, this function takes as arguments lists of x and y positions, and allows for aesthetic customization with a variety of optional parameters. For more information on these options, look <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html">here</a>. Our plotting code now looks like this:</p>
-<div class="sourceCode" id="cb115"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb115-1"><a href="plotting-with-matplotlib.html#cb115-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb115-2"><a href="plotting-with-matplotlib.html#cb115-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb115-3"><a href="plotting-with-matplotlib.html#cb115-3" aria-hidden="true" tabindex="-1"></a>hours <span class="op">=</span> <span class="bu">range</span>(<span class="dv">7</span>)</span>
-<span id="cb115-4"><a href="plotting-with-matplotlib.html#cb115-4" aria-hidden="true" tabindex="-1"></a>tempBaltimore <span class="op">=</span> [<span class="dv">74</span>, <span class="dv">73</span>, <span class="dv">72</span>, <span class="dv">71</span>, <span class="dv">75</span>, <span class="dv">79</span>, <span class="dv">87</span>]</span>
-<span id="cb115-5"><a href="plotting-with-matplotlib.html#cb115-5" aria-hidden="true" tabindex="-1"></a>tempWommels <span class="op">=</span> [<span class="dv">59</span>, <span class="dv">60</span>, <span class="dv">62</span>, <span class="dv">65</span>, <span class="dv">69</span>, <span class="dv">72</span>, <span class="dv">67</span>]</span>
-<span id="cb115-6"><a href="plotting-with-matplotlib.html#cb115-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb115-7"><a href="plotting-with-matplotlib.html#cb115-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb115-8"><a href="plotting-with-matplotlib.html#cb115-8" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots()</span>
-<span id="cb115-9"><a href="plotting-with-matplotlib.html#cb115-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb115-10"><a href="plotting-with-matplotlib.html#cb115-10" aria-hidden="true" tabindex="-1"></a>ax.scatter(hours, tempBaltimore)</span>
-<span id="cb115-11"><a href="plotting-with-matplotlib.html#cb115-11" aria-hidden="true" tabindex="-1"></a>ax.plot(hours, tempBaltimore)</span>
-<span id="cb115-12"><a href="plotting-with-matplotlib.html#cb115-12" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<div class="sourceCode" id="cb121"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb121-1"><a href="plotting-with-matplotlib.html#cb121-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb121-2"><a href="plotting-with-matplotlib.html#cb121-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb121-3"><a href="plotting-with-matplotlib.html#cb121-3" aria-hidden="true" tabindex="-1"></a>hours <span class="op">=</span> <span class="bu">range</span>(<span class="dv">7</span>)</span>
+<span id="cb121-4"><a href="plotting-with-matplotlib.html#cb121-4" aria-hidden="true" tabindex="-1"></a>tempBaltimore <span class="op">=</span> [<span class="dv">74</span>, <span class="dv">73</span>, <span class="dv">72</span>, <span class="dv">71</span>, <span class="dv">75</span>, <span class="dv">79</span>, <span class="dv">87</span>]</span>
+<span id="cb121-5"><a href="plotting-with-matplotlib.html#cb121-5" aria-hidden="true" tabindex="-1"></a>tempWommels <span class="op">=</span> [<span class="dv">59</span>, <span class="dv">60</span>, <span class="dv">62</span>, <span class="dv">65</span>, <span class="dv">69</span>, <span class="dv">72</span>, <span class="dv">67</span>]</span>
+<span id="cb121-6"><a href="plotting-with-matplotlib.html#cb121-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb121-7"><a href="plotting-with-matplotlib.html#cb121-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb121-8"><a href="plotting-with-matplotlib.html#cb121-8" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots()</span>
+<span id="cb121-9"><a href="plotting-with-matplotlib.html#cb121-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb121-10"><a href="plotting-with-matplotlib.html#cb121-10" aria-hidden="true" tabindex="-1"></a>ax.scatter(hours, tempBaltimore)</span>
+<span id="cb121-11"><a href="plotting-with-matplotlib.html#cb121-11" aria-hidden="true" tabindex="-1"></a>ax.plot(hours, tempBaltimore)</span>
+<span id="cb121-12"><a href="plotting-with-matplotlib.html#cb121-12" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
 <p>and generates this image:</p>
 <p><img src="img/baltimoreLine.png" title="Baltimore temperatures - points and line" alt="Scatter and line plots of Baltimore temperatures." style="display: block; margin: auto;" /></p>
 </div>
 <div id="multiple-sets-of-data" class="section level4" number="3.14.1.2">
 <h4><span class="header-section-number">3.14.1.2</span> Multiple Sets of Data</h4>
 <p>To plot both Baltimore and Wommels, we simply add a second call to <code>.scatter()</code> and <code>.plot()</code>:</p>
-<div class="sourceCode" id="cb116"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb116-1"><a href="plotting-with-matplotlib.html#cb116-1" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots()</span>
-<span id="cb116-2"><a href="plotting-with-matplotlib.html#cb116-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb116-3"><a href="plotting-with-matplotlib.html#cb116-3" aria-hidden="true" tabindex="-1"></a>ax.scatter(hours, tempBaltimore)</span>
-<span id="cb116-4"><a href="plotting-with-matplotlib.html#cb116-4" aria-hidden="true" tabindex="-1"></a>ax.plot(hours, tempBaltimore)</span>
-<span id="cb116-5"><a href="plotting-with-matplotlib.html#cb116-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb116-6"><a href="plotting-with-matplotlib.html#cb116-6" aria-hidden="true" tabindex="-1"></a>ax.scatter(hours, tempWommels)</span>
-<span id="cb116-7"><a href="plotting-with-matplotlib.html#cb116-7" aria-hidden="true" tabindex="-1"></a>ax.plot(hours, tempWommels)</span>
-<span id="cb116-8"><a href="plotting-with-matplotlib.html#cb116-8" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<div class="sourceCode" id="cb122"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb122-1"><a href="plotting-with-matplotlib.html#cb122-1" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots()</span>
+<span id="cb122-2"><a href="plotting-with-matplotlib.html#cb122-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb122-3"><a href="plotting-with-matplotlib.html#cb122-3" aria-hidden="true" tabindex="-1"></a>ax.scatter(hours, tempBaltimore)</span>
+<span id="cb122-4"><a href="plotting-with-matplotlib.html#cb122-4" aria-hidden="true" tabindex="-1"></a>ax.plot(hours, tempBaltimore)</span>
+<span id="cb122-5"><a href="plotting-with-matplotlib.html#cb122-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb122-6"><a href="plotting-with-matplotlib.html#cb122-6" aria-hidden="true" tabindex="-1"></a>ax.scatter(hours, tempWommels)</span>
+<span id="cb122-7"><a href="plotting-with-matplotlib.html#cb122-7" aria-hidden="true" tabindex="-1"></a>ax.plot(hours, tempWommels)</span>
+<span id="cb122-8"><a href="plotting-with-matplotlib.html#cb122-8" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
 <p><img src="img/baltimoreWommels.png" title="Temperature in Baltimore and Wommels" alt="Scatter and line plots of Baltimore and Wommels temperatures." style="display: block; margin: auto;" /></p>
 <p>A couple things are interesting about this plot:</p>
 <ul>
@@ -298,26 +297,26 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <li>We need to use the optional <code>label</code> argument. This argument tells the interpreter how to label a line or set of points in the legend. For example, we can label a set of points as such: <code>ax.scatter(hours, tempBaltimore, label='Baltimore')</code>. In this example, we can label either the scatter plots or the line plots.</li>
 <li>Create a legend using the <code>.legend()</code> method.</li>
 </ol>
-<div class="sourceCode" id="cb117"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb117-1"><a href="plotting-with-matplotlib.html#cb117-1" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots()</span>
-<span id="cb117-2"><a href="plotting-with-matplotlib.html#cb117-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb117-3"><a href="plotting-with-matplotlib.html#cb117-3" aria-hidden="true" tabindex="-1"></a>ax.scatter(hours, tempBaltimore, label<span class="op">=</span><span class="st">&#39;Baltimore&#39;</span>)</span>
-<span id="cb117-4"><a href="plotting-with-matplotlib.html#cb117-4" aria-hidden="true" tabindex="-1"></a>ax.plot(hours, tempBaltimore)</span>
-<span id="cb117-5"><a href="plotting-with-matplotlib.html#cb117-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb117-6"><a href="plotting-with-matplotlib.html#cb117-6" aria-hidden="true" tabindex="-1"></a>ax.scatter(hours, tempWommels, label<span class="op">=</span><span class="st">&#39;Wommels&#39;</span>)</span>
-<span id="cb117-7"><a href="plotting-with-matplotlib.html#cb117-7" aria-hidden="true" tabindex="-1"></a>ax.plot(hours, tempWommels)</span>
-<span id="cb117-8"><a href="plotting-with-matplotlib.html#cb117-8" aria-hidden="true" tabindex="-1"></a>ax.legend()</span>
-<span id="cb117-9"><a href="plotting-with-matplotlib.html#cb117-9" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<div class="sourceCode" id="cb123"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb123-1"><a href="plotting-with-matplotlib.html#cb123-1" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots()</span>
+<span id="cb123-2"><a href="plotting-with-matplotlib.html#cb123-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb123-3"><a href="plotting-with-matplotlib.html#cb123-3" aria-hidden="true" tabindex="-1"></a>ax.scatter(hours, tempBaltimore, label<span class="op">=</span><span class="st">&#39;Baltimore&#39;</span>)</span>
+<span id="cb123-4"><a href="plotting-with-matplotlib.html#cb123-4" aria-hidden="true" tabindex="-1"></a>ax.plot(hours, tempBaltimore)</span>
+<span id="cb123-5"><a href="plotting-with-matplotlib.html#cb123-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb123-6"><a href="plotting-with-matplotlib.html#cb123-6" aria-hidden="true" tabindex="-1"></a>ax.scatter(hours, tempWommels, label<span class="op">=</span><span class="st">&#39;Wommels&#39;</span>)</span>
+<span id="cb123-7"><a href="plotting-with-matplotlib.html#cb123-7" aria-hidden="true" tabindex="-1"></a>ax.plot(hours, tempWommels)</span>
+<span id="cb123-8"><a href="plotting-with-matplotlib.html#cb123-8" aria-hidden="true" tabindex="-1"></a>ax.legend()</span>
+<span id="cb123-9"><a href="plotting-with-matplotlib.html#cb123-9" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
 <p><img src="img/labeledPlot.png" title="Temperature in Baltimore and Wommels" alt="Scatter and line plots of Baltimore and Wommels temperatures." style="display: block; margin: auto;" /></p>
 </div>
 <div id="figure-aesthetics" class="section level4" number="3.14.1.4">
 <h4><span class="header-section-number">3.14.1.4</span> Figure Aesthetics</h4>
 <p>Now that our data is plotted, let’s add some axis labels using the <code>.set_xlabel()</code> and <code>.set_ylabel()</code> methods:</p>
-<div class="sourceCode" id="cb118"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb118-1"><a href="plotting-with-matplotlib.html#cb118-1" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">&quot;Time (Hours)&quot;</span>)</span>
-<span id="cb118-2"><a href="plotting-with-matplotlib.html#cb118-2" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">&quot;Temperature (F)&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb124"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb124-1"><a href="plotting-with-matplotlib.html#cb124-1" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">&quot;Time (Hours)&quot;</span>)</span>
+<span id="cb124-2"><a href="plotting-with-matplotlib.html#cb124-2" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">&quot;Temperature (F)&quot;</span>)</span></code></pre></div>
 <p>We can set a title as such:</p>
-<div class="sourceCode" id="cb119"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb119-1"><a href="plotting-with-matplotlib.html#cb119-1" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">&#39;Temperature in Baltimore and Wommels&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb125"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb125-1"><a href="plotting-with-matplotlib.html#cb125-1" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">&#39;Temperature in Baltimore and Wommels&#39;</span>)</span></code></pre></div>
 <p>If we wanted to set custom limits for our x and y limits, we can use the <code>set_xlim()</code> and <code>set_ylim()</code> methods:</p>
-<div class="sourceCode" id="cb120"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb120-1"><a href="plotting-with-matplotlib.html#cb120-1" aria-hidden="true" tabindex="-1"></a>ax.set_ylim(<span class="dv">50</span>, <span class="dv">100</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb126"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb126-1"><a href="plotting-with-matplotlib.html#cb126-1" aria-hidden="true" tabindex="-1"></a>ax.set_ylim(<span class="dv">50</span>, <span class="dv">100</span>)</span></code></pre></div>
 <p>Altogether, our final image looks like this:</p>
 <p><img src="img/finalPlot.png" title="Temperature in Baltimore and Wommels" alt="Scatter and line plots of Baltimore and Wommels temperatures." style="display: block; margin: auto;" /></p>
 </div>
@@ -326,21 +325,22 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <h3><span class="header-section-number">3.14.2</span> Histograms</h3>
 <p>Histograms are a convenient way of visually displaying the overall distribution of a one-dimensional dataset.</p>
 <p>I’ve found 25 towns worldwide named Baltimore. Here are their current temperature in Fahrenheit saved to a list:</p>
-<div class="sourceCode" id="cb121"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb121-1"><a href="plotting-with-matplotlib.html#cb121-1" aria-hidden="true" tabindex="-1"></a>temperatureBaltimore <span class="op">=</span> [<span class="dv">69</span>, <span class="dv">83</span>, <span class="dv">82</span>, <span class="dv">90</span>, <span class="dv">77</span>, <span class="dv">89</span>, <span class="dv">82</span>, <span class="dv">67</span>, <span class="dv">59</span>, <span class="dv">86</span>, <span class="dv">74</span>, <span class="dv">77</span>, <span class="dv">58</span>, <span class="dv">67</span>, <span class="dv">62</span>, <span class="dv">91</span>, <span class="dv">73</span>, <span class="dv">81</span>, <span class="dv">67</span>, <span class="dv">87</span>, <span class="dv">61</span>, <span class="dv">67</span>, <span class="dv">61</span>, <span class="dv">108</span>, <span class="dv">112</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb127"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb127-1"><a href="plotting-with-matplotlib.html#cb127-1" aria-hidden="true" tabindex="-1"></a>temperatureBaltimore <span class="op">=</span> [<span class="dv">69</span>, <span class="dv">83</span>, <span class="dv">82</span>, <span class="dv">90</span>, <span class="dv">77</span>, <span class="dv">89</span>, <span class="dv">82</span>, <span class="dv">67</span>, <span class="dv">59</span>, <span class="dv">86</span>, <span class="dv">74</span>, <span class="dv">77</span>, <span class="dv">58</span>, <span class="dv">67</span>, <span class="dv">62</span>, <span class="dv">91</span>, <span class="dv">73</span>, <span class="dv">81</span>, <span class="dv">67</span>, <span class="dv">87</span>, <span class="dv">61</span>, <span class="dv">67</span>, <span class="dv">61</span>, <span class="dv">108</span>, <span class="dv">112</span>]</span></code></pre></div>
 <p>To generate a histogram, we use the <code>.hist()</code> method. By default, this method takes just one argument: the data that you wish to plot.</p>
-<div class="sourceCode" id="cb122"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb122-1"><a href="plotting-with-matplotlib.html#cb122-1" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots()</span>
-<span id="cb122-2"><a href="plotting-with-matplotlib.html#cb122-2" aria-hidden="true" tabindex="-1"></a>ax.hist(temperatureBaltimore)</span>
-<span id="cb122-3"><a href="plotting-with-matplotlib.html#cb122-3" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">&#39;Temperature (F)&#39;</span>)</span>
-<span id="cb122-4"><a href="plotting-with-matplotlib.html#cb122-4" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">&#39;Frequency&#39;</span>)</span>
-<span id="cb122-5"><a href="plotting-with-matplotlib.html#cb122-5" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">&#39;Current Temperature in Every Town Named Baltimore&#39;</span>)</span>
-<span id="cb122-6"><a href="plotting-with-matplotlib.html#cb122-6" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<div class="sourceCode" id="cb128"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb128-1"><a href="plotting-with-matplotlib.html#cb128-1" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots()</span>
+<span id="cb128-2"><a href="plotting-with-matplotlib.html#cb128-2" aria-hidden="true" tabindex="-1"></a>ax.hist(temperatureBaltimore)</span>
+<span id="cb128-3"><a href="plotting-with-matplotlib.html#cb128-3" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">&#39;Temperature (F)&#39;</span>)</span>
+<span id="cb128-4"><a href="plotting-with-matplotlib.html#cb128-4" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">&#39;Frequency&#39;</span>)</span>
+<span id="cb128-5"><a href="plotting-with-matplotlib.html#cb128-5" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">&#39;Current Temperature in Every Town Named Baltimore&#39;</span>)</span>
+<span id="cb128-6"><a href="plotting-with-matplotlib.html#cb128-6" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
 <p><img src="img/allBaltimores.png" title="Temperature in all Baltimores" alt="Histogram of temperature in every town named Baltimore" style="display: block; margin: auto;" /></p>
 <p>One important argument for the <code>.hist()</code> method is <code>bins</code>, which allows us to set how many groups our data is divided into. The more bins there are, the fewer x values will be contained within a single bin. For example, plotting the Baltimore data with a larger number of bins:</p>
-<div class="sourceCode" id="cb123"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb123-1"><a href="plotting-with-matplotlib.html#cb123-1" aria-hidden="true" tabindex="-1"></a>ax.hist(temperatureBaltimore, bins <span class="op">=</span> <span class="dv">20</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb129"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb129-1"><a href="plotting-with-matplotlib.html#cb129-1" aria-hidden="true" tabindex="-1"></a>ax.hist(temperatureBaltimore, bins <span class="op">=</span> <span class="dv">20</span>)</span></code></pre></div>
 <p><img src="img/allBaltimoresBins.png" title="Temperature in all Baltimores" alt="Histogram of temperature in every town named Baltimore" style="display: block; margin: auto;" /></p>
 
 </div>
 </div>
+<!-- </div> -->
 <hr>
 <center> 
   <div class="footer">
@@ -355,7 +355,7 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
         </div>
       </div>
 <a href="numpy-1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="errors.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="git.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
