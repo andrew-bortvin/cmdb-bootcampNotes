@@ -139,13 +139,14 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2" data-path="python-cheat-sheet.html"><a href="python-cheat-sheet.html"><i class="fa fa-check"></i><b>2</b> Python Cheat Sheet</a>
 <ul>
 <li class="chapter" data-level="2.0.1" data-path="python-cheat-sheet.html"><a href="python-cheat-sheet.html#mathematics"><i class="fa fa-check"></i><b>2.0.1</b> Mathematics</a></li>
-<li class="chapter" data-level="2.0.2" data-path="python-cheat-sheet.html"><a href="python-cheat-sheet.html#comparisons"><i class="fa fa-check"></i><b>2.0.2</b> Comparisons</a></li>
-<li class="chapter" data-level="2.0.3" data-path="python-cheat-sheet.html"><a href="python-cheat-sheet.html#string-methods"><i class="fa fa-check"></i><b>2.0.3</b> String Methods</a></li>
-<li class="chapter" data-level="2.0.4" data-path="python-cheat-sheet.html"><a href="python-cheat-sheet.html#type-conversion"><i class="fa fa-check"></i><b>2.0.4</b> Type Conversion</a></li>
-<li class="chapter" data-level="2.0.5" data-path="python-cheat-sheet.html"><a href="python-cheat-sheet.html#working-with-files"><i class="fa fa-check"></i><b>2.0.5</b> Working with Files</a></li>
-<li class="chapter" data-level="2.0.6" data-path="python-cheat-sheet.html"><a href="python-cheat-sheet.html#list-methods"><i class="fa fa-check"></i><b>2.0.6</b> List methods</a></li>
-<li class="chapter" data-level="2.0.7" data-path="python-cheat-sheet.html"><a href="python-cheat-sheet.html#numpy"><i class="fa fa-check"></i><b>2.0.7</b> <code>Numpy</code></a></li>
-<li class="chapter" data-level="2.0.8" data-path="python-cheat-sheet.html"><a href="python-cheat-sheet.html#plotting"><i class="fa fa-check"></i><b>2.0.8</b> Plotting</a></li>
+<li class="chapter" data-level="2.0.2" data-path="python-cheat-sheet.html"><a href="python-cheat-sheet.html#common-python-functions"><i class="fa fa-check"></i><b>2.0.2</b> Common Python Functions</a></li>
+<li class="chapter" data-level="2.0.3" data-path="python-cheat-sheet.html"><a href="python-cheat-sheet.html#comparisons"><i class="fa fa-check"></i><b>2.0.3</b> Comparisons</a></li>
+<li class="chapter" data-level="2.0.4" data-path="python-cheat-sheet.html"><a href="python-cheat-sheet.html#string-methods"><i class="fa fa-check"></i><b>2.0.4</b> String Methods</a></li>
+<li class="chapter" data-level="2.0.5" data-path="python-cheat-sheet.html"><a href="python-cheat-sheet.html#type-conversion"><i class="fa fa-check"></i><b>2.0.5</b> Type Conversion</a></li>
+<li class="chapter" data-level="2.0.6" data-path="python-cheat-sheet.html"><a href="python-cheat-sheet.html#working-with-files"><i class="fa fa-check"></i><b>2.0.6</b> Working with Files</a></li>
+<li class="chapter" data-level="2.0.7" data-path="python-cheat-sheet.html"><a href="python-cheat-sheet.html#list-methods"><i class="fa fa-check"></i><b>2.0.7</b> List methods</a></li>
+<li class="chapter" data-level="2.0.8" data-path="python-cheat-sheet.html"><a href="python-cheat-sheet.html#numpy"><i class="fa fa-check"></i><b>2.0.8</b> <code>Numpy</code></a></li>
+<li class="chapter" data-level="2.0.9" data-path="python-cheat-sheet.html"><a href="python-cheat-sheet.html#plotting"><i class="fa fa-check"></i><b>2.0.9</b> Plotting</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="python.html"><a href="python.html"><i class="fa fa-check"></i><b>3</b> Python</a>
 <ul>
@@ -240,20 +241,20 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <p>Often, we need to make use of functions beyond the basic ones in Python. To do this, we can import a <strong>module</strong>, or a collection of pre-written functions. A module is imported with the following syntax:</p>
 <pre><code>import &lt;module name&gt;</code></pre>
 <p>For example, to import the popular plotting module Matplotlib, we write:</p>
-<div class="sourceCode" id="cb105"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb105-1"><a href="modules.html#cb105-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot</span></code></pre></div>
+<div class="sourceCode" id="cb107"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb107-1"><a href="modules.html#cb107-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot</span></code></pre></div>
 <div id="module-functions" class="section level3" number="3.12.1">
 <h3><span class="header-section-number">3.12.1</span> Module functions</h3>
 <p>To use a function from Matplotlib, we need to reference both the package name and the function name, with the general syntax:</p>
 <pre><code>moduleName.functionName()</code></pre>
 <p>To use Matplotlib’s <code>show()</code> function, we would write:</p>
-<div class="sourceCode" id="cb107"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb107-1"><a href="modules.html#cb107-1" aria-hidden="true" tabindex="-1"></a>matplotlib.pyplot.show()</span></code></pre></div>
+<div class="sourceCode" id="cb109"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb109-1"><a href="modules.html#cb109-1" aria-hidden="true" tabindex="-1"></a>matplotlib.pyplot.show()</span></code></pre></div>
 </div>
 <div id="abbreviating-module-names" class="section level3" number="3.12.2">
 <h3><span class="header-section-number">3.12.2</span> Abbreviating module names</h3>
 <p>What if you don’t want to write out <code>matplotlib.pyplot</code> every time you run a Matplotlib function? To simplify this, we can give our modules a shorthand name. For example:</p>
-<div class="sourceCode" id="cb108"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb108-1"><a href="modules.html#cb108-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span></code></pre></div>
+<div class="sourceCode" id="cb110"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb110-1"><a href="modules.html#cb110-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span></code></pre></div>
 <p>Now, instead of writing out <code>matplotlib.pyplot</code>, we can just write <code>plt</code>. The previous <code>matplotlib.pyplot.show()</code> command is shortened to:</p>
-<div class="sourceCode" id="cb109"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb109-1"><a href="modules.html#cb109-1" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<div class="sourceCode" id="cb111"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb111-1"><a href="modules.html#cb111-1" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
 
 </div>
 </div>

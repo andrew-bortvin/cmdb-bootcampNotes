@@ -139,13 +139,14 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2" data-path="python-cheat-sheet.html"><a href="python-cheat-sheet.html"><i class="fa fa-check"></i><b>2</b> Python Cheat Sheet</a>
 <ul>
 <li class="chapter" data-level="2.0.1" data-path="python-cheat-sheet.html"><a href="python-cheat-sheet.html#mathematics"><i class="fa fa-check"></i><b>2.0.1</b> Mathematics</a></li>
-<li class="chapter" data-level="2.0.2" data-path="python-cheat-sheet.html"><a href="python-cheat-sheet.html#comparisons"><i class="fa fa-check"></i><b>2.0.2</b> Comparisons</a></li>
-<li class="chapter" data-level="2.0.3" data-path="python-cheat-sheet.html"><a href="python-cheat-sheet.html#string-methods"><i class="fa fa-check"></i><b>2.0.3</b> String Methods</a></li>
-<li class="chapter" data-level="2.0.4" data-path="python-cheat-sheet.html"><a href="python-cheat-sheet.html#type-conversion"><i class="fa fa-check"></i><b>2.0.4</b> Type Conversion</a></li>
-<li class="chapter" data-level="2.0.5" data-path="python-cheat-sheet.html"><a href="python-cheat-sheet.html#working-with-files"><i class="fa fa-check"></i><b>2.0.5</b> Working with Files</a></li>
-<li class="chapter" data-level="2.0.6" data-path="python-cheat-sheet.html"><a href="python-cheat-sheet.html#list-methods"><i class="fa fa-check"></i><b>2.0.6</b> List methods</a></li>
-<li class="chapter" data-level="2.0.7" data-path="python-cheat-sheet.html"><a href="python-cheat-sheet.html#numpy"><i class="fa fa-check"></i><b>2.0.7</b> <code>Numpy</code></a></li>
-<li class="chapter" data-level="2.0.8" data-path="python-cheat-sheet.html"><a href="python-cheat-sheet.html#plotting"><i class="fa fa-check"></i><b>2.0.8</b> Plotting</a></li>
+<li class="chapter" data-level="2.0.2" data-path="python-cheat-sheet.html"><a href="python-cheat-sheet.html#common-python-functions"><i class="fa fa-check"></i><b>2.0.2</b> Common Python Functions</a></li>
+<li class="chapter" data-level="2.0.3" data-path="python-cheat-sheet.html"><a href="python-cheat-sheet.html#comparisons"><i class="fa fa-check"></i><b>2.0.3</b> Comparisons</a></li>
+<li class="chapter" data-level="2.0.4" data-path="python-cheat-sheet.html"><a href="python-cheat-sheet.html#string-methods"><i class="fa fa-check"></i><b>2.0.4</b> String Methods</a></li>
+<li class="chapter" data-level="2.0.5" data-path="python-cheat-sheet.html"><a href="python-cheat-sheet.html#type-conversion"><i class="fa fa-check"></i><b>2.0.5</b> Type Conversion</a></li>
+<li class="chapter" data-level="2.0.6" data-path="python-cheat-sheet.html"><a href="python-cheat-sheet.html#working-with-files"><i class="fa fa-check"></i><b>2.0.6</b> Working with Files</a></li>
+<li class="chapter" data-level="2.0.7" data-path="python-cheat-sheet.html"><a href="python-cheat-sheet.html#list-methods"><i class="fa fa-check"></i><b>2.0.7</b> List methods</a></li>
+<li class="chapter" data-level="2.0.8" data-path="python-cheat-sheet.html"><a href="python-cheat-sheet.html#numpy"><i class="fa fa-check"></i><b>2.0.8</b> <code>Numpy</code></a></li>
+<li class="chapter" data-level="2.0.9" data-path="python-cheat-sheet.html"><a href="python-cheat-sheet.html#plotting"><i class="fa fa-check"></i><b>2.0.9</b> Plotting</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="python.html"><a href="python.html"><i class="fa fa-check"></i><b>3</b> Python</a>
 <ul>
@@ -242,18 +243,26 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li><code>+</code> and <code>-</code>: addition and subtraction</li>
 <li><code>*</code> and <code>/</code>: multiplication and division</li>
+<li><code>//</code>: floor division</li>
 <li><code>**</code>: exponentials</li>
 </ul>
 </div>
-<div id="comparisons" class="section level3" number="2.0.2">
-<h3><span class="header-section-number">2.0.2</span> Comparisons</h3>
+<div id="common-python-functions" class="section level3" number="2.0.2">
+<h3><span class="header-section-number">2.0.2</span> Common Python Functions</h3>
+<ul>
+<li><code>print()</code>: print a string to screen</li>
+<li><code>type()</code>: return the data type of an object</li>
+</ul>
+</div>
+<div id="comparisons" class="section level3" number="2.0.3">
+<h3><span class="header-section-number">2.0.3</span> Comparisons</h3>
 <ul>
 <li><code>&lt;</code> and <code>&gt;</code>: greater than, less than</li>
 <li><code>&lt;=</code> and <code>&gt;=</code>: greater than or equal to, less than or equal to</li>
 </ul>
 </div>
-<div id="string-methods" class="section level3" number="2.0.3">
-<h3><span class="header-section-number">2.0.3</span> String Methods</h3>
+<div id="string-methods" class="section level3" number="2.0.4">
+<h3><span class="header-section-number">2.0.4</span> String Methods</h3>
 <ul>
 <li><code>.upper()</code> and <code>.lower()</code>: Convert string to upper or lower case</li>
 <li><code>.split()</code>: Split a string on a delimiter into a list</li>
@@ -261,30 +270,30 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <li><code>.rstrip()</code>, <code>.lstrip()</code>, and <code>.strip()</code>: Remove unwanted characters from the right side, left side, or both sides of a string</li>
 </ul>
 </div>
-<div id="type-conversion" class="section level3" number="2.0.4">
-<h3><span class="header-section-number">2.0.4</span> Type Conversion</h3>
+<div id="type-conversion" class="section level3" number="2.0.5">
+<h3><span class="header-section-number">2.0.5</span> Type Conversion</h3>
 <ul>
 <li><code>float()</code>: Convert data to float</li>
 <li><code>int()</code>: Convert data to an integer</li>
 <li><code>str()</code>: Convert data to a string</li>
 </ul>
 </div>
-<div id="working-with-files" class="section level3" number="2.0.5">
-<h3><span class="header-section-number">2.0.5</span> Working with Files</h3>
+<div id="working-with-files" class="section level3" number="2.0.6">
+<h3><span class="header-section-number">2.0.6</span> Working with Files</h3>
 <ul>
 <li><code>open(file, mode)</code>: Most common modes are: (<code>r</code>), write (<code>w</code>), append (<code>a</code>)</li>
 <li><code>.readlines()</code>: Return a list where each element is a line from the input file</li>
 <li><code>.close()</code>: Close the file</li>
 </ul>
 </div>
-<div id="list-methods" class="section level3" number="2.0.6">
-<h3><span class="header-section-number">2.0.6</span> List methods</h3>
+<div id="list-methods" class="section level3" number="2.0.7">
+<h3><span class="header-section-number">2.0.7</span> List methods</h3>
 <ul>
 <li><code>.append()</code>: Add an element to the end of a list</li>
 </ul>
 </div>
-<div id="numpy" class="section level3" number="2.0.7">
-<h3><span class="header-section-number">2.0.7</span> <code>Numpy</code></h3>
+<div id="numpy" class="section level3" number="2.0.8">
+<h3><span class="header-section-number">2.0.8</span> <code>Numpy</code></h3>
 <ul>
 <li><code>loadtxt()</code>: Import a file</li>
 <li><code>array.shape</code>: Return the number of rows and columns of a <code>numpy</code> array object</li>
@@ -294,8 +303,8 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <li><code>np.min()</code>: Return the minimum value of an array. Can be used with <code>axis</code></li>
 </ul>
 </div>
-<div id="plotting" class="section level3" number="2.0.8">
-<h3><span class="header-section-number">2.0.8</span> Plotting</h3>
+<div id="plotting" class="section level3" number="2.0.9">
+<h3><span class="header-section-number">2.0.9</span> Plotting</h3>
 <ul>
 <li><code>plt.subplots()</code>: Initialize a figure with at least one subplot</li>
 <li><code>.scatter()</code>: Create a scatter plot</li>

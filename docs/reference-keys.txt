@@ -1,6 +1,7 @@
 course-resources
 python-cheat-sheet
 mathematics
+common-python-functions
 comparisons
 string-methods
 type-conversion
