@@ -238,15 +238,15 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <div id="numpy-1" class="section level2" number="3.13">
 <h2><span class="header-section-number">3.13</span> Numpy</h2>
 <p>Numpy is a Python library used for manipulating arrays and performing mathematical operations on matrices. For concision, we will import the <code>numpy</code> module with the name <code>np</code>, as such:</p>
-<div class="sourceCode" id="cb106"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb106-1"><a href="numpy-1.html#cb106-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span></code></pre></div>
+<div class="sourceCode" id="cb110"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb110-1"><a href="numpy-1.html#cb110-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span></code></pre></div>
 <div id="reading-in-data-1" class="section level3" number="3.13.1">
 <h3><span class="header-section-number">3.13.1</span> Reading in data</h3>
 <p>The function <code>np.loadtxt()</code> is used to read in text data. The most basic way to run <code>np.loadtxt()</code> is:</p>
-<div class="sourceCode" id="cb107"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb107-1"><a href="numpy-1.html#cb107-1" aria-hidden="true" tabindex="-1"></a>np.loadtxt(<span class="op">&lt;</span>fname<span class="op">&gt;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb111"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb111-1"><a href="numpy-1.html#cb111-1" aria-hidden="true" tabindex="-1"></a>np.loadtxt(<span class="op">&lt;</span>fname<span class="op">&gt;</span>)</span></code></pre></div>
 <p>Consider a hypothetical comma-delimited file <code>numbers.csv</code>. The most basic way of reading it in is to run <code>np.loadtxt('numbers.csv')</code>. However, when we read in data, we typically want to store it in memory for further manipulation, so we usually use <code>np.loadtxt()</code> in conjunction with variable assignment:</p>
-<div class="sourceCode" id="cb108"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb108-1"><a href="numpy-1.html#cb108-1" aria-hidden="true" tabindex="-1"></a>myNumbers <span class="op">=</span> np.loadtxt(<span class="st">&#39;numbers.csv&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb112"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb112-1"><a href="numpy-1.html#cb112-1" aria-hidden="true" tabindex="-1"></a>myNumbers <span class="op">=</span> np.loadtxt(<span class="st">&#39;numbers.csv&#39;</span>)</span></code></pre></div>
 <p>However, with a comma-delimited file as input this is likely to cause an error - Python has no way of knowing that elements in your file are separated by a space and will throw an error because something like “1,2,3” cannot be interpreted as a single numeric value. To tell Python that our data is comma-delimited, we can use the <strong>optional argument</strong>, <code>delimiter</code>:</p>
-<div class="sourceCode" id="cb109"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb109-1"><a href="numpy-1.html#cb109-1" aria-hidden="true" tabindex="-1"></a>myNumbers <span class="op">=</span> np.loadtxt(<span class="st">&#39;numbers.csv&#39;</span>, delimiter<span class="op">=</span><span class="st">&#39;,&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb113"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb113-1"><a href="numpy-1.html#cb113-1" aria-hidden="true" tabindex="-1"></a>myNumbers <span class="op">=</span> np.loadtxt(<span class="st">&#39;numbers.csv&#39;</span>, delimiter<span class="op">=</span><span class="st">&#39;,&#39;</span>)</span></code></pre></div>
 <p>Now, each number is encoded as its own element:</p>
 <p><code>array([1, 2, 3])</code></p>
 <p>Notice that unlike the file name, we need to specify the name of this optional argument (<code>delimiter=</code>). Because the file name argument is mandatory, <code>numpy</code> always expects the first argument to be the filename. However, since there are many possible optional arguments that once can use, it is impossible to infer which optional argument is being referred to by position alone. For optional arguments, we <strong>always need to specify their name</strong>.</p>
@@ -259,15 +259,15 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <div id="accessing-single-values" class="section level4" number="3.13.2.1">
 <h4><span class="header-section-number">3.13.2.1</span> Accessing Single Values</h4>
 <p>To look within these rows and columns for specific values, we use indexing:</p>
-<div class="sourceCode" id="cb110"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb110-1"><a href="numpy-1.html#cb110-1" aria-hidden="true" tabindex="-1"></a>dataName[<span class="op">&lt;</span>rowNumber<span class="op">&gt;</span>, <span class="op">&lt;</span>columnNumber<span class="op">&gt;</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb114"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb114-1"><a href="numpy-1.html#cb114-1" aria-hidden="true" tabindex="-1"></a>dataName[<span class="op">&lt;</span>rowNumber<span class="op">&gt;</span>, <span class="op">&lt;</span>columnNumber<span class="op">&gt;</span>]</span></code></pre></div>
 <p>For example, to print the value in the fifth row and third column of <code>myNumbers</code>, we would write:</p>
-<div class="sourceCode" id="cb111"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb111-1"><a href="numpy-1.html#cb111-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(myNumbers[<span class="dv">4</span>, <span class="dv">2</span>])</span></code></pre></div>
+<div class="sourceCode" id="cb115"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb115-1"><a href="numpy-1.html#cb115-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(myNumbers[<span class="dv">4</span>, <span class="dv">2</span>])</span></code></pre></div>
 <p>Remember that in Python, we start counting at <code>0</code>.</p>
 </div>
 <div id="accessing-multiple-values" class="section level4" number="3.13.2.2">
 <h4><span class="header-section-number">3.13.2.2</span> Accessing Multiple Values</h4>
 <p>To print multiple consecutive items, we can provide two numbers separated by a colon <code>:</code>.</p>
-<div class="sourceCode" id="cb112"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb112-1"><a href="numpy-1.html#cb112-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(myNumbers[<span class="dv">2</span>:<span class="dv">4</span>, <span class="dv">5</span>:<span class="dv">10</span>])</span></code></pre></div>
+<div class="sourceCode" id="cb116"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb116-1"><a href="numpy-1.html#cb116-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(myNumbers[<span class="dv">2</span>:<span class="dv">4</span>, <span class="dv">5</span>:<span class="dv">10</span>])</span></code></pre></div>
 <p>Note that the first number is <strong>inclusive</strong> and the second number is <strong>exclusive</strong>: We will print the elements in rows 3 and 4 and not row 5. We will print the the elements in columns 6 through 10, and not in column 11.</p>
 </div>
 </div>
@@ -281,14 +281,14 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <h3><span class="header-section-number">3.13.4</span> Average, Standard Deviation, Maximum, Minimum</h3>
 <p>To take the average of this array, we use the function <code>np.mean()</code>. <code>np.mean()</code> has one required argument, which is the name of the object you want to take the mean of.</p>
 <p>Running this function on <code>sequence</code> will return <code>3.5</code>, which is indeed the average of all six elements:</p>
-<div class="sourceCode" id="cb114"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb114-1"><a href="numpy-1.html#cb114-1" aria-hidden="true" tabindex="-1"></a>np.mean(sequence)</span></code></pre></div>
-<div class="sourceCode" id="cb115"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb115-1"><a href="numpy-1.html#cb115-1" aria-hidden="true" tabindex="-1"></a><span class="fl">3.5</span></span></code></pre></div>
+<div class="sourceCode" id="cb118"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb118-1"><a href="numpy-1.html#cb118-1" aria-hidden="true" tabindex="-1"></a>np.mean(sequence)</span></code></pre></div>
+<div class="sourceCode" id="cb119"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb119-1"><a href="numpy-1.html#cb119-1" aria-hidden="true" tabindex="-1"></a><span class="fl">3.5</span></span></code></pre></div>
 <p>Conveniently, we can also use this same function to calculate the averages across rows and columns, by invoking the optional <code>axis</code> argument. Setting <code>axis</code> equal to <code>0</code> will produce column means; setting <code>axis</code> to <code>1</code> will produce row means:</p>
-<div class="sourceCode" id="cb116"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb116-1"><a href="numpy-1.html#cb116-1" aria-hidden="true" tabindex="-1"></a>np.mean(sequence, axis<span class="op">=</span><span class="dv">0</span>)</span>
-<span id="cb116-2"><a href="numpy-1.html#cb116-2" aria-hidden="true" tabindex="-1"></a>array([<span class="fl">2.5</span>, <span class="fl">3.5</span>, <span class="fl">4.5</span>])</span>
-<span id="cb116-3"><a href="numpy-1.html#cb116-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb116-4"><a href="numpy-1.html#cb116-4" aria-hidden="true" tabindex="-1"></a>np.mean(sequence, axis<span class="op">=</span><span class="dv">1</span>)</span>
-<span id="cb116-5"><a href="numpy-1.html#cb116-5" aria-hidden="true" tabindex="-1"></a>array([<span class="fl">2.</span>, <span class="fl">5.</span>])</span></code></pre></div>
+<div class="sourceCode" id="cb120"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb120-1"><a href="numpy-1.html#cb120-1" aria-hidden="true" tabindex="-1"></a>np.mean(sequence, axis<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb120-2"><a href="numpy-1.html#cb120-2" aria-hidden="true" tabindex="-1"></a>array([<span class="fl">2.5</span>, <span class="fl">3.5</span>, <span class="fl">4.5</span>])</span>
+<span id="cb120-3"><a href="numpy-1.html#cb120-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb120-4"><a href="numpy-1.html#cb120-4" aria-hidden="true" tabindex="-1"></a>np.mean(sequence, axis<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb120-5"><a href="numpy-1.html#cb120-5" aria-hidden="true" tabindex="-1"></a>array([<span class="fl">2.</span>, <span class="fl">5.</span>])</span></code></pre></div>
 <p>To compute the standard deviation, we use the <code>np.std()</code>. As with <code>np.mean()</code>, we can provide the <code>axis</code> argument to calculate the standard deviation along rows or columns.</p>
 <p>We can get the maximum and minimum values of a <code>numpy</code> array using the <code>np.max()</code> and <code>np.min()</code> functions, respectively. These can also take the <code>axis</code> argument to operate along rows and columns.</p>
 
