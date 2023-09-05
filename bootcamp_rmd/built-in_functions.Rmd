@@ -23,6 +23,12 @@ myString = "yeehaw"
 print(myString)
 ```
 
+Throughout the course, we will learn about many of the functions that are a part of the Python language. For now, also note the `type()` function. This function takes any object as an argument and returns the data type of your object.
+
+```{r typeDemo, engine='python'}
+myObject = 5**3/7
+print(type(myObject))
+```
 
 ### Methods
 
