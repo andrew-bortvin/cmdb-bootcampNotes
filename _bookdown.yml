@@ -1,6 +1,6 @@
 book_filename: "swcmdb"
 chapter_name: ""
-repo: https://github.com/andrew-bortvin/swcmdb/
+repo: https://andrew-bortvin.github.io/cmdb-bootcampNotes/
 rmd_files: ["index.Rmd",
             "bootcamp_rmd/pythonCheat.Rmd",
             "bootcamp_rmd/variables.Rmd",
