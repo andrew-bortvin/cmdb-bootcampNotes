@@ -99,3 +99,4 @@ f.close()
 ```
 
 Once the file is closed, we cannot read it or write to it without opening it again. 
+
