@@ -8,13 +8,21 @@ ottrpal::set_knitr_image_path()
 
 A **function** is a block of code that performs a task. Python comes with a substantial set of pre-written functions. 
 
-***Text on how a function is formulated - name, parentheses, optionally arguments*** 
+To use a function, type the function's name, followed by parentheses. Usually, a function will operate on some data. Specify the data that you want to input to your function within the parentheses. Each item within the parentheses is called an **argument**. 
 
-***Is it worth talking about named arguments or positional arguments. Be introspective about this***
+For example, the `print()` function prints its argument to screen: 
 
-For example, the `print()` function displays ***FINISH ME***
+```{r print demo, engine='python'}
+print('howdy')
+```
 
-***OTHER Built-In FUNCTIONS***'
+Note that we can also pass in a variable name as an argument: 
+
+```{r print variabl, engine='python'}
+myString = "yeehaw"
+print(myString)
+```
+
 
 ### Methods
 
