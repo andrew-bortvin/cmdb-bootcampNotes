@@ -34,6 +34,9 @@ adding-to-lists
 for-loops
 for-loop-walkthrough
 repeating-an-action-n-times
+modifying-lists-through-loops
+appending-to-an-empty-list
+looping-through-indices
 while-loops
 infinite-loops
 if-statements
