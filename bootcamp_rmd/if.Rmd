@@ -6,14 +6,14 @@ ottrpal::set_knitr_image_path()
 
 Sometimes, we only want to perform an operation if a condition is met. To do this, we can use the if statement, which is structured as such:
 
-```{r, engine='python', eval=FALSE}
+```{r a , engine='python', eval=FALSE}
 if <condition>:
     {do something}
 ```
 
 The `<condition>` above is a statement that evaluates to a Boolean (i.e. `True` or `False`). As such, the comparison expressions we have seen previously (`>`, `==`, `!=`, `<=`, etc.) are common components of an if statement. For example:
 
-```{r, engine='python'}
+```{r b, engine='python'}
 my_number = 3
 
 if my_number < 4:
@@ -27,7 +27,7 @@ The first statement is true: 3 is less than 4. As a result, the first print stat
   
 Another use of conditions is checking whether a list contains a value of interest. For this, we can use `in`:
   
-```{r, engine='python'} 
+```{r c, engine='python'} 
 first_number = 3
 second_number = 5
 list_1 = [2,3,4]
@@ -45,7 +45,7 @@ What if we want to perform an action if a condition is met, and a different acti
 
 We can do this using the `else` statement:
   
-```{r, engine='python'} 
+```{r d, engine='python'} 
 if <condition>:
   {do something}
 else:
@@ -54,7 +54,7 @@ else:
   
 For example, we can imagine a scenario in which the birth rate in a population depends on the current population size, where we can set the birth rate to one of two values whether the current population is above or below a threshold:  
   
-```{r, engine='python', eval=FALSE}  
+```{r e, engine='python', eval=FALSE}  
 current_pop_size = 450
 
 if current_pop_size >= 500:
@@ -69,7 +69,7 @@ print(birth_rate)
   
 What if we want to check more than one condition? For this, we have the `else if` statement, which is structured as such:
 
-```{r, engine='python', eval=FALSE}
+```{r f, engine='python', eval=FALSE}
 if <condition>:
   {do something}
 elif <second condition>:
@@ -78,7 +78,7 @@ elif <second condition>:
   
 We can string together any number of `else if` statments. Going back to our birth rate example, what if instead of just two possible birth rates, we wanted a gradient of options? We could write something like this:  
  
-```{r, engine='python', eval=FALSE} 
+```{r g, engine='python', eval=FALSE} 
 current_pop_size = 450
 
 if current_pop_size >= 500:
@@ -97,8 +97,6 @@ Notice that the second `elif` statement (`elif current_pop_size >= 300`) is true
 
 
 
-
-print(birth_rate)  
   
   
   
