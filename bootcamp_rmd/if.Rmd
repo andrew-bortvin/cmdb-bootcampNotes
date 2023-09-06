@@ -45,7 +45,7 @@ What if we want to perform an action if a condition is met, and a different acti
 
 We can do this using the `else` statement:
   
-```{r d, engine='python'} 
+```{r d, engine='python', eval=FALSE} 
 if <condition>:
   {do something}
 else:
