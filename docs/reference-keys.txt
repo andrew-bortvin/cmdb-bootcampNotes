@@ -66,6 +66,7 @@ labels-and-legends
 figure-aesthetics
 histograms
 dictionaries
+looking-up-values
 git
 introduction-to-git-and-github-for-beginners
 what-is-git
