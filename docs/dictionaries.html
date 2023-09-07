@@ -311,6 +311,16 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <pre><code>## [&#39;UUG&#39;]
 ## [&#39;CUU&#39;, &#39;CUG&#39;]
 ## [&#39;GCC&#39;]</code></pre>
+<p>We can use <code>.items()</code> to iterate through the keys and values together:</p>
+<div class="sourceCode" id="cb176"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb176-1"><a href="dictionaries.html#cb176-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> key, value <span class="kw">in</span> codons.items():</span>
+<span id="cb176-2"><a href="dictionaries.html#cb176-2" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(key, value)</span></code></pre></div>
+<pre><code>## Phe [&#39;UUG&#39;]
+## Leu [&#39;CUU&#39;, &#39;CUG&#39;]
+## Ala [&#39;GCC&#39;]</code></pre>
+<p>Lastly, if we want the data returned by <code>.keys()</code>, <code>.values()</code>, and <code>.items()</code> stored as list, we can do:</p>
+<div class="sourceCode" id="cb178"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb178-1"><a href="dictionaries.html#cb178-1" aria-hidden="true" tabindex="-1"></a>dictionary_keys_list <span class="op">=</span> <span class="bu">list</span>(codons.keys())</span>
+<span id="cb178-2"><a href="dictionaries.html#cb178-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(dictionary_keys_list)</span></code></pre></div>
+<pre><code>## [&#39;Phe&#39;, &#39;Leu&#39;, &#39;Ala&#39;]</code></pre>
 
 </div>
 </div>
