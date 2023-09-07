@@ -23,3 +23,31 @@ codons = {'Phe' : ['UUG'],
           
 print(codons)
 ```
+
+### Looking up values
+
+We can look up the values in a dictionary as such: 
+
+```{r, engine='python'}
+codons['Phe']
+```
+
+We can also do this by storing the key name as a variable: 
+
+```{r, engine='python'}
+myKey = 'Phe'
+codons[myKey]
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
