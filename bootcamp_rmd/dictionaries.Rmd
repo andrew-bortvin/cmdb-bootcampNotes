@@ -1,0 +1,25 @@
+```{r, include = FALSE}
+ottrpal::set_knitr_image_path()
+```
+
+## Dictionaries
+
+A dictionary is a way of storing data, associating each item in the dictionary with a name. The common example used to conceptualize this is a phone book - each name is associated with a phone number. 
+
+We can define a dictionary using the following syntax:
+
+```{r, engine='python', eval=FALSE}
+dictionaryName = {<key1> : <value1>, 
+                  <key2> : <value2>}
+```
+
+The `keys` in a dictionary are conventionally a string or an integer. The `values` can be most data types (lists, integers, floats, etc.).
+
+A simple creation of a dictionary: 
+
+```{r, engine='python'}
+codons = {'Phe' : ['UUG'], 
+          'Leu' : ['CUU']}
+          
+print(codons)
+```
