@@ -19,7 +19,7 @@ A simple creation of a dictionary:
 
 ```{r, engine='python'}
 codons = {'Phe' : ['UUG'], 
-          'Leu' : ['CUU']}
+          'Leu' : ['CUC']}
           
 print(codons)
 ```
@@ -39,15 +39,51 @@ myKey = 'Phe'
 codons[myKey]
 ```
 
+### Adding to a dictionary 
 
+We add to a dictionary as such: 
 
+```{r, engine='python', eval=FALSE}
+<dictionary name>[<key>] = <value> 
+```
 
+If the key already exists, then you will **overwrite** the existing value: 
 
+```{r, engine='python'}
+print(codons['Leu'])
+codons['Leu'] = ['CUU']
+print(codons['Leu'])
+```
 
+If the key does not already exist in your dictionary, you will add a new key-value pair: 
 
+```{r, engine='python'}
+codons['Ala'] = ['GCC']
+print(codons)
+```
 
+Likewise, we can use this syntax to modify existing values: 
 
+```{r, engine='python'}
+print(codons['Leu'])
+codons['Leu'].append('CUG')
+print(codons['Leu'])
+```
 
+This takes the codon value for `Leu`, which is the list `['CUU']`. Then, we append the value `'CUG'`.
 
+### Looping through dictionaries
 
+We can get the `keys` of a dictionary using the method: `.keys()`:
 
+```{r, engine='python'}
+for i in codons.keys():
+  print(i)
+```
+
+We can do the same for value using `.values()`:
+
+```{r, engine='python'}
+for i in codons.values():
+  print(i)
+```
