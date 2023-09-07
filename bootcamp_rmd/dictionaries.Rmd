@@ -88,12 +88,22 @@ for i in codons.values():
   print(i)
 ```
 
-
 We can use `.items()` to iterate through the keys and values together:
 
 ```{r, engine='python'}
-for key, value in items():
+for key, value in codons.items():
   print(key, value)
 ```
+
+Lastly, if we want the data returned by `.keys()`, `.values()`, and `.items()` stored as list, we can do: 
+
+```{r, engine='python'}
+dictionary_keys_list = list(codons.keys())
+print(dictionary_keys_list)
+```
+
+
+
+
 
 
