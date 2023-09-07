@@ -67,6 +67,8 @@ figure-aesthetics
 histograms
 dictionaries
 looking-up-values
+adding-to-a-dictionary
+looping-through-dictionaries
 git
 introduction-to-git-and-github-for-beginners
 what-is-git
