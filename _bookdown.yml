@@ -18,6 +18,7 @@ rmd_files: ["index.Rmd",
             "bootcamp_rmd/modules.Rmd",
             "bootcamp_rmd/numpy.Rmd",
             "bootcamp_rmd/plotting_with_matplotlib.Rmd",
+            "bootcamp_rmd/dictionaries.Rmd",
             "bootcamp_rmd/03_Git.Rmd",
             "About.Rmd"]
 delete_merged_file: true
