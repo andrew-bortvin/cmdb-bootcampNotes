@@ -14,12 +14,17 @@ The most important data type that we use in `pandas` is the DataFrame, which is 
 
 <img src="img/iris.png" title="Iris dataset" alt="Iris dataset." style="display: block; margin: auto;" />
 
+Note the overall organization of this DataFrame: 
+
+* In the leftmost column, we have the **indices**, which are the row names of our DataFrame. Here, the indices are the integer row numbers.
+* In the top row, we have the **column names** of our dataframe.  
+
 ### Importing data 
 
 The key function we will use to import data is `pd.read_csv()`. The only required argument to this function is the name of the file you are trying to import, and by default `pandas` will do a lot ot infer the appropriate settings to correctly read in your data. However, it doesn't always get things right, especially for more complicated datasets. Some useful arguments that can control how your file is imported are:
 
 * `sep` - a string which separates values. By default, `,`.
-* `header`
+* `header` - a 
 
 
 
