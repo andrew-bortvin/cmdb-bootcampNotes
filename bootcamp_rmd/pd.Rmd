@@ -77,27 +77,45 @@ We can first check which rows in the `Species` column contain the string `virgin
 iris.loc[:, 'Species'] == 'virginica' 
 ``` 
 
+<img src="img/subset4.png" title="Iris dataset, subsetted" alt="Iris dataset, subsetted" style="display: block; margin: auto;" />
+
 We can now subset this just rows where the above is true like so: 
 
 ```{r, engine='python', eval = FALSE}
 iris.loc[iris.loc[:, 'Species'] == 'virginica', :]
 ``` 
 
-If the above looks cumbersome and hard to read (which it is), you can break it up into multiple rows for legibility:
+or if the above looks cumbersome and hard to read (which it is), you can break it up into multiple rows for legibility:
 
 ```{r, engine='python', eval = FALSE}
 virginicaRows = iris.loc[:, 'Species'] == 'virginica'
 iris.loc[virginicaRows, :]
 ``` 
 
+<img src="img/subset5.png" title="Iris dataset, subsetted" alt="Iris dataset, subsetted" style="display: block; margin: auto;" />
 
+### Adding Columns
 
+We can add a new column to our DataFrame by using the following notation:
 
+```{r, engine='python', eval = FALSE}
+<dataFrame>.loc[:, <columnName>] = <data>
+``` 
 
+`<data>` can be a list of values that you provide, or it can be a modification of an existing column. For example, if we wanted to add double the petal width, we could do so as such:
 
+```{r, engine='python', eval = FALSE}
+iris.loc[:, 'Petal.Width.Doubled'] = 2 * iris.loc[:, 'Petal.Width']
+print(iris)
+``` 
 
+<img src="img/subset5.png" title="Iris dataset, new col" alt="Iris dataset, new col" style="display: block; margin: auto;" />
 
+### Adding Rows
 
+We can use a similar notation to add a new row. Here, we instead provide `pandas` with a new index: 
+
+### Loopting Through Pandas DataFrames
 
 
 
