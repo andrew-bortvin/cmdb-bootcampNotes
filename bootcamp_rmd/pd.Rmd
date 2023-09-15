@@ -47,7 +47,7 @@ For example, if we want to find the petal width of the plant in the fifth row, w
 iris.loc[4, 'Petal.Width']
 ```
 
-<img src="img/subset1" title="Iris dataset, subsetted" alt="Iris dataset, subsetted" style="display: block; margin: auto;" />
+<img src="img/subset1.png" title="Iris dataset, subsetted" alt="Iris dataset, subsetted" style="display: block; margin: auto;" />
 
 As with lists, we can use a colon to indicate a range of values that we want to subset:
 
@@ -55,7 +55,7 @@ As with lists, we can use a colon to indicate a range of values that we want to 
 iris.loc[18:22, 'Sepal.Width']
 ```
 
-<img src="img/subset2" title="Iris dataset, subsetted" alt="Iris dataset, subsetted" style="display: block; margin: auto;" />
+<img src="img/subset2.png" title="Iris dataset, subsetted" alt="Iris dataset, subsetted" style="display: block; margin: auto;" />
 
 Also as with lists, leaving one side of the colon blank indicates that we want to index to the start/end of the data structure. Therefore, the following notation extracts an entire column: 
 
@@ -63,7 +63,7 @@ Also as with lists, leaving one side of the colon blank indicates that we want t
 iris.loc[:, 'Species']
 ```
 
-<img src="img/subset3" title="Iris dataset, subsetted" alt="Iris dataset, subsetted" style="display: block; margin: auto;" />
+<img src="img/subset3.png" title="Iris dataset, subsetted" alt="Iris dataset, subsetted" style="display: block; margin: auto;" />
 
 ### Boolean Indexing
 
