@@ -298,6 +298,10 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="boolean-indexing" class="section level3" number="3.17.3">
 <h3><span class="header-section-number">3.17.3</span> Boolean Indexing</h3>
+<p><code>pandas</code> DataFrames present a new way of subsetting data: Boolean indexing. Boolean indexing refers to taking a vector of <code>True</code> or <code>False</code> values that is equal in size to one of the dimensions of your DataFrame and subsetting your data to only elements in <code>True</code> positions.</p>
+<p>For example: let’s say that we want to subset our data just to the Virginica species.</p>
+<p>We can first check which rows in the <code>Species</code> column contain the string <code>virginica</code>:</p>
+<div class="sourceCode" id="cb159"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb159-1"><a href="pandas.html#cb159-1" aria-hidden="true" tabindex="-1"></a>iris.loc[:, <span class="st">&#39;Species&#39;</span>] <span class="op">==</span> <span class="st">&#39;virginica&#39;</span> </span></code></pre></div>
 
 </div>
 </div>
