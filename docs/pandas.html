@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>3.2 Variables | CMDB Bootcamp and QuantBio</title>
+  <title>3.17 Pandas | CMDB Bootcamp and QuantBio</title>
   <meta name="description" content="Description of Course" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="3.2 Variables | CMDB Bootcamp and QuantBio" />
+  <meta property="og:title" content="3.17 Pandas | CMDB Bootcamp and QuantBio" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="3.2 Variables | CMDB Bootcamp and QuantBio" />
+  <meta name="twitter:title" content="3.17 Pandas | CMDB Bootcamp and QuantBio" />
   
   <meta name="twitter:description" content="Description of Course" />
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="assets/peppa.png" type="image/x-icon" />
-<link rel="prev" href="data-types.html"/>
-<link rel="next" href="math.html"/>
+<link rel="prev" href="plotting-with-matplotlib.html"/>
+<link rel="next" href="dictionaries.html"/>
 <script src="libs/header-attrs-2.10/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -256,23 +256,27 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="variables" class="section level2" number="3.2">
-<h2><span class="header-section-number">3.2</span> Variables</h2>
-<p>Variables are assigned using the <code>=</code> sign:</p>
-<pre><code>variable_name = value</code></pre>
-<p>For example:</p>
+<div id="pandas" class="section level2" number="3.17">
+<h2><span class="header-section-number">3.17</span> Pandas</h2>
+<p>Along with <code>numpy</code>, <code>pandas</code> is one of the most common Python libraries for working with tabular data. Where <code>numpy</code> is optimized for working for matrices of numerical data and rapid mathematical operations, <code>pandas</code> is designed for <strong>manipulating and reshaping tables that contain multiple data types</strong>. As with other packages, it is conventional to import pandas with a shortened name, as:</p>
+<div class="sourceCode" id="cb154"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb154-1"><a href="pandas.html#cb154-1" aria-hidden="true" tabindex="-1"></a>pd.read_csv()</span></code></pre></div>
+<p>The most important data type that we use in <code>pandas</code> is the DataFrame, which is a two-dimensional data structure. A typical DataFrame looks like this:</p>
+<p><img src="img/iris.png" title="Iris dataset" alt="Iris dataset." style="display: block; margin: auto;" /></p>
+<p>Note the overall organization of this DataFrame:</p>
 <ul>
-<li><code>composer = "buxtehude"</code></li>
-<li><code>year = 1637</code></li>
+<li>In the leftmost column, we have the <strong>indices</strong>, which are the row names of our DataFrame. Here, the indices are the integer row numbers.</li>
+<li>In the top row, we have the <strong>column names</strong> of our dataframe.</li>
 </ul>
-<p>The variable name can be almost anything. Here are some general rules to consider when naming a variable:</p>
+<div id="importing-data" class="section level3" number="3.17.1">
+<h3><span class="header-section-number">3.17.1</span> Importing data</h3>
+<p>The key function we will use to import data is <code>pd.read_csv()</code>. The only required argument to this function is the name of the file you are trying to import, and by default <code>pandas</code> will do a lot ot infer the appropriate settings to correctly read in your data. However, it doesn’t always get things right, especially for more complicated datasets. Some useful arguments that can control how your file is imported are:</p>
 <ul>
-<li>The name must start with a letter or underscore</li>
-<li>The name can only consist of letters, numbers, or underscores</li>
-<li>Variables are case sensitive (i.e. Python interprets <code>my_number</code>, <code>MY_NUMBER</code>, and <code>My_Number</code> as different variables)</li>
-<li>Python has a set of “reserved words” that cannot be used as variable names. These are words that already have a set meaning in Python, such as <code>True</code>, <code>False</code>, <code>for</code>, and <code>if</code>. A full list can be found <a href="https://www.programiz.com/python-programming/keywords-identifier"><strong>here</strong></a>.</li>
+<li><code>sep</code> - a string which separates values. By default, <code>,</code>.</li>
+<li><code>header</code> - the row number in your data that contains the header. The header is used to infer column names.</li>
+<li><code>names</code> - in the case that</li>
 </ul>
 
+</div>
 </div>
 <hr>
 <center> 
@@ -287,8 +291,8 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="data-types.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="math.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="plotting-with-matplotlib.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="dictionaries.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

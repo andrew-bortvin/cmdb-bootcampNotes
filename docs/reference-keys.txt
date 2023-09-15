@@ -65,6 +65,8 @@ multiple-sets-of-data
 labels-and-legends
 figure-aesthetics
 histograms
+pandas
+importing-data
 dictionaries
 looking-up-values
 adding-to-a-dictionary
