@@ -24,7 +24,8 @@ Note the overall organization of this DataFrame:
 The key function we will use to import data is `pd.read_csv()`. The only required argument to this function is the name of the file you are trying to import, and by default `pandas` will do a lot ot infer the appropriate settings to correctly read in your data. However, it doesn't always get things right, especially for more complicated datasets. Some useful arguments that can control how your file is imported are:
 
 * `sep` - a string which separates values. By default, `,`.
-* `header` - a 
+* `header` - the row number in your data that contains the header. The header is used to infer column names.
+* `names` - in the case that 
 
 
 
