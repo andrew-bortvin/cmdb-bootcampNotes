@@ -221,6 +221,9 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.17.1" data-path="pandas.html"><a href="pandas.html#importing-data"><i class="fa fa-check"></i><b>3.17.1</b> Importing Data</a></li>
 <li class="chapter" data-level="3.17.2" data-path="pandas.html"><a href="pandas.html#subsetting-data"><i class="fa fa-check"></i><b>3.17.2</b> Subsetting Data</a></li>
 <li class="chapter" data-level="3.17.3" data-path="pandas.html"><a href="pandas.html#boolean-indexing"><i class="fa fa-check"></i><b>3.17.3</b> Boolean Indexing</a></li>
+<li class="chapter" data-level="3.17.4" data-path="pandas.html"><a href="pandas.html#adding-columns"><i class="fa fa-check"></i><b>3.17.4</b> Adding Columns</a></li>
+<li class="chapter" data-level="3.17.5" data-path="pandas.html"><a href="pandas.html#adding-rows"><i class="fa fa-check"></i><b>3.17.5</b> Adding Rows</a></li>
+<li class="chapter" data-level="3.17.6" data-path="pandas.html"><a href="pandas.html#loopting-through-pandas-dataframes"><i class="fa fa-check"></i><b>3.17.6</b> Loopting Through Pandas DataFrames</a></li>
 </ul></li>
 <li class="chapter" data-level="3.18" data-path="dictionaries.html"><a href="dictionaries.html"><i class="fa fa-check"></i><b>3.18</b> Dictionaries</a>
 <ul>
@@ -262,70 +265,70 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <h2><span class="header-section-number">3.18</span> Dictionaries</h2>
 <p>A dictionary is a way of storing data, associating each item in the dictionary with a name. The common example used to conceptualize this is a phone book - each name is associated with a phone number.</p>
 <p>We can define a dictionary using the following syntax:</p>
-<div class="sourceCode" id="cb162"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb162-1"><a href="dictionaries.html#cb162-1" aria-hidden="true" tabindex="-1"></a>dictionaryName <span class="op">=</span> {<span class="op">&lt;</span>key1<span class="op">&gt;</span> : <span class="op">&lt;</span>value1<span class="op">&gt;</span>, </span>
-<span id="cb162-2"><a href="dictionaries.html#cb162-2" aria-hidden="true" tabindex="-1"></a>                  <span class="op">&lt;</span>key2<span class="op">&gt;</span> : <span class="op">&lt;</span>value2<span class="op">&gt;</span>}</span></code></pre></div>
+<div class="sourceCode" id="cb164"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb164-1"><a href="dictionaries.html#cb164-1" aria-hidden="true" tabindex="-1"></a>dictionaryName <span class="op">=</span> {<span class="op">&lt;</span>key1<span class="op">&gt;</span> : <span class="op">&lt;</span>value1<span class="op">&gt;</span>, </span>
+<span id="cb164-2"><a href="dictionaries.html#cb164-2" aria-hidden="true" tabindex="-1"></a>                  <span class="op">&lt;</span>key2<span class="op">&gt;</span> : <span class="op">&lt;</span>value2<span class="op">&gt;</span>}</span></code></pre></div>
 <p>The <code>keys</code> in a dictionary are conventionally a string or an integer. The <code>values</code> can be most data types (lists, integers, floats, etc.).</p>
 <p>A simple creation of a dictionary:</p>
-<div class="sourceCode" id="cb163"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb163-1"><a href="dictionaries.html#cb163-1" aria-hidden="true" tabindex="-1"></a>codons <span class="op">=</span> {<span class="st">&#39;Phe&#39;</span> : [<span class="st">&#39;UUG&#39;</span>], </span>
-<span id="cb163-2"><a href="dictionaries.html#cb163-2" aria-hidden="true" tabindex="-1"></a>          <span class="st">&#39;Leu&#39;</span> : [<span class="st">&#39;CUC&#39;</span>]}</span>
-<span id="cb163-3"><a href="dictionaries.html#cb163-3" aria-hidden="true" tabindex="-1"></a>          </span>
-<span id="cb163-4"><a href="dictionaries.html#cb163-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(codons)</span></code></pre></div>
+<div class="sourceCode" id="cb165"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb165-1"><a href="dictionaries.html#cb165-1" aria-hidden="true" tabindex="-1"></a>codons <span class="op">=</span> {<span class="st">&#39;Phe&#39;</span> : [<span class="st">&#39;UUG&#39;</span>], </span>
+<span id="cb165-2"><a href="dictionaries.html#cb165-2" aria-hidden="true" tabindex="-1"></a>          <span class="st">&#39;Leu&#39;</span> : [<span class="st">&#39;CUC&#39;</span>]}</span>
+<span id="cb165-3"><a href="dictionaries.html#cb165-3" aria-hidden="true" tabindex="-1"></a>          </span>
+<span id="cb165-4"><a href="dictionaries.html#cb165-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(codons)</span></code></pre></div>
 <pre><code>## {&#39;Phe&#39;: [&#39;UUG&#39;], &#39;Leu&#39;: [&#39;CUC&#39;]}</code></pre>
 <div id="looking-up-values" class="section level3" number="3.18.1">
 <h3><span class="header-section-number">3.18.1</span> Looking up values</h3>
 <p>We can look up the values in a dictionary as such:</p>
-<div class="sourceCode" id="cb165"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb165-1"><a href="dictionaries.html#cb165-1" aria-hidden="true" tabindex="-1"></a>codons[<span class="st">&#39;Phe&#39;</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb167"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb167-1"><a href="dictionaries.html#cb167-1" aria-hidden="true" tabindex="-1"></a>codons[<span class="st">&#39;Phe&#39;</span>]</span></code></pre></div>
 <pre><code>## [&#39;UUG&#39;]</code></pre>
 <p>We can also do this by storing the key name as a variable:</p>
-<div class="sourceCode" id="cb167"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb167-1"><a href="dictionaries.html#cb167-1" aria-hidden="true" tabindex="-1"></a>myKey <span class="op">=</span> <span class="st">&#39;Phe&#39;</span></span>
-<span id="cb167-2"><a href="dictionaries.html#cb167-2" aria-hidden="true" tabindex="-1"></a>codons[myKey]</span></code></pre></div>
+<div class="sourceCode" id="cb169"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb169-1"><a href="dictionaries.html#cb169-1" aria-hidden="true" tabindex="-1"></a>myKey <span class="op">=</span> <span class="st">&#39;Phe&#39;</span></span>
+<span id="cb169-2"><a href="dictionaries.html#cb169-2" aria-hidden="true" tabindex="-1"></a>codons[myKey]</span></code></pre></div>
 <pre><code>## [&#39;UUG&#39;]</code></pre>
 </div>
 <div id="adding-to-a-dictionary" class="section level3" number="3.18.2">
 <h3><span class="header-section-number">3.18.2</span> Adding to a dictionary</h3>
 <p>We add to a dictionary as such:</p>
-<div class="sourceCode" id="cb169"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb169-1"><a href="dictionaries.html#cb169-1" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>dictionary name<span class="op">&gt;</span>[<span class="op">&lt;</span>key<span class="op">&gt;</span>] <span class="op">=</span> <span class="op">&lt;</span>value<span class="op">&gt;</span> </span></code></pre></div>
+<div class="sourceCode" id="cb171"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb171-1"><a href="dictionaries.html#cb171-1" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>dictionary name<span class="op">&gt;</span>[<span class="op">&lt;</span>key<span class="op">&gt;</span>] <span class="op">=</span> <span class="op">&lt;</span>value<span class="op">&gt;</span> </span></code></pre></div>
 <p>If the key already exists, then you will <strong>overwrite</strong> the existing value:</p>
-<div class="sourceCode" id="cb170"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb170-1"><a href="dictionaries.html#cb170-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(codons[<span class="st">&#39;Leu&#39;</span>])</span></code></pre></div>
+<div class="sourceCode" id="cb172"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb172-1"><a href="dictionaries.html#cb172-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(codons[<span class="st">&#39;Leu&#39;</span>])</span></code></pre></div>
 <pre><code>## [&#39;CUC&#39;]</code></pre>
-<div class="sourceCode" id="cb172"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb172-1"><a href="dictionaries.html#cb172-1" aria-hidden="true" tabindex="-1"></a>codons[<span class="st">&#39;Leu&#39;</span>] <span class="op">=</span> [<span class="st">&#39;CUU&#39;</span>]</span>
-<span id="cb172-2"><a href="dictionaries.html#cb172-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(codons[<span class="st">&#39;Leu&#39;</span>])</span></code></pre></div>
+<div class="sourceCode" id="cb174"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb174-1"><a href="dictionaries.html#cb174-1" aria-hidden="true" tabindex="-1"></a>codons[<span class="st">&#39;Leu&#39;</span>] <span class="op">=</span> [<span class="st">&#39;CUU&#39;</span>]</span>
+<span id="cb174-2"><a href="dictionaries.html#cb174-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(codons[<span class="st">&#39;Leu&#39;</span>])</span></code></pre></div>
 <pre><code>## [&#39;CUU&#39;]</code></pre>
 <p>If the key does not already exist in your dictionary, you will add a new key-value pair:</p>
-<div class="sourceCode" id="cb174"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb174-1"><a href="dictionaries.html#cb174-1" aria-hidden="true" tabindex="-1"></a>codons[<span class="st">&#39;Ala&#39;</span>] <span class="op">=</span> [<span class="st">&#39;GCC&#39;</span>]</span>
-<span id="cb174-2"><a href="dictionaries.html#cb174-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(codons)</span></code></pre></div>
+<div class="sourceCode" id="cb176"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb176-1"><a href="dictionaries.html#cb176-1" aria-hidden="true" tabindex="-1"></a>codons[<span class="st">&#39;Ala&#39;</span>] <span class="op">=</span> [<span class="st">&#39;GCC&#39;</span>]</span>
+<span id="cb176-2"><a href="dictionaries.html#cb176-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(codons)</span></code></pre></div>
 <pre><code>## {&#39;Phe&#39;: [&#39;UUG&#39;], &#39;Leu&#39;: [&#39;CUU&#39;], &#39;Ala&#39;: [&#39;GCC&#39;]}</code></pre>
 <p>Likewise, we can use this syntax to modify existing values:</p>
-<div class="sourceCode" id="cb176"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb176-1"><a href="dictionaries.html#cb176-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(codons[<span class="st">&#39;Leu&#39;</span>])</span></code></pre></div>
+<div class="sourceCode" id="cb178"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb178-1"><a href="dictionaries.html#cb178-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(codons[<span class="st">&#39;Leu&#39;</span>])</span></code></pre></div>
 <pre><code>## [&#39;CUU&#39;]</code></pre>
-<div class="sourceCode" id="cb178"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb178-1"><a href="dictionaries.html#cb178-1" aria-hidden="true" tabindex="-1"></a>codons[<span class="st">&#39;Leu&#39;</span>].append(<span class="st">&#39;CUG&#39;</span>)</span>
-<span id="cb178-2"><a href="dictionaries.html#cb178-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(codons[<span class="st">&#39;Leu&#39;</span>])</span></code></pre></div>
+<div class="sourceCode" id="cb180"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb180-1"><a href="dictionaries.html#cb180-1" aria-hidden="true" tabindex="-1"></a>codons[<span class="st">&#39;Leu&#39;</span>].append(<span class="st">&#39;CUG&#39;</span>)</span>
+<span id="cb180-2"><a href="dictionaries.html#cb180-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(codons[<span class="st">&#39;Leu&#39;</span>])</span></code></pre></div>
 <pre><code>## [&#39;CUU&#39;, &#39;CUG&#39;]</code></pre>
 <p>This takes the codon value for <code>Leu</code>, which is the list <code>['CUU']</code>. Then, we append the value <code>'CUG'</code>.</p>
 </div>
 <div id="looping-through-dictionaries" class="section level3" number="3.18.3">
 <h3><span class="header-section-number">3.18.3</span> Looping through dictionaries</h3>
 <p>We can get the <code>keys</code> of a dictionary using the method: <code>.keys()</code>:</p>
-<div class="sourceCode" id="cb180"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb180-1"><a href="dictionaries.html#cb180-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> codons.keys():</span>
-<span id="cb180-2"><a href="dictionaries.html#cb180-2" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(i)</span></code></pre></div>
+<div class="sourceCode" id="cb182"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb182-1"><a href="dictionaries.html#cb182-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> codons.keys():</span>
+<span id="cb182-2"><a href="dictionaries.html#cb182-2" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(i)</span></code></pre></div>
 <pre><code>## Phe
 ## Leu
 ## Ala</code></pre>
 <p>We can do the same for value using <code>.values()</code>:</p>
-<div class="sourceCode" id="cb182"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb182-1"><a href="dictionaries.html#cb182-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> codons.values():</span>
-<span id="cb182-2"><a href="dictionaries.html#cb182-2" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(i)</span></code></pre></div>
+<div class="sourceCode" id="cb184"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb184-1"><a href="dictionaries.html#cb184-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> codons.values():</span>
+<span id="cb184-2"><a href="dictionaries.html#cb184-2" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(i)</span></code></pre></div>
 <pre><code>## [&#39;UUG&#39;]
 ## [&#39;CUU&#39;, &#39;CUG&#39;]
 ## [&#39;GCC&#39;]</code></pre>
 <p>We can use <code>.items()</code> to iterate through the keys and values together:</p>
-<div class="sourceCode" id="cb184"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb184-1"><a href="dictionaries.html#cb184-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> key, value <span class="kw">in</span> codons.items():</span>
-<span id="cb184-2"><a href="dictionaries.html#cb184-2" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(key, value)</span></code></pre></div>
+<div class="sourceCode" id="cb186"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb186-1"><a href="dictionaries.html#cb186-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> key, value <span class="kw">in</span> codons.items():</span>
+<span id="cb186-2"><a href="dictionaries.html#cb186-2" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(key, value)</span></code></pre></div>
 <pre><code>## Phe [&#39;UUG&#39;]
 ## Leu [&#39;CUU&#39;, &#39;CUG&#39;]
 ## Ala [&#39;GCC&#39;]</code></pre>
 <p>Lastly, if we want the data returned by <code>.keys()</code>, <code>.values()</code>, and <code>.items()</code> stored as list, we can do:</p>
-<div class="sourceCode" id="cb186"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb186-1"><a href="dictionaries.html#cb186-1" aria-hidden="true" tabindex="-1"></a>dictionary_keys_list <span class="op">=</span> <span class="bu">list</span>(codons.keys())</span>
-<span id="cb186-2"><a href="dictionaries.html#cb186-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(dictionary_keys_list)</span></code></pre></div>
+<div class="sourceCode" id="cb188"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb188-1"><a href="dictionaries.html#cb188-1" aria-hidden="true" tabindex="-1"></a>dictionary_keys_list <span class="op">=</span> <span class="bu">list</span>(codons.keys())</span>
+<span id="cb188-2"><a href="dictionaries.html#cb188-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(dictionary_keys_list)</span></code></pre></div>
 <pre><code>## [&#39;Phe&#39;, &#39;Leu&#39;, &#39;Ala&#39;]</code></pre>
 
 </div>

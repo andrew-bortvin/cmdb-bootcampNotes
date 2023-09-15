@@ -221,6 +221,9 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.17.1" data-path="pandas.html"><a href="pandas.html#importing-data"><i class="fa fa-check"></i><b>3.17.1</b> Importing Data</a></li>
 <li class="chapter" data-level="3.17.2" data-path="pandas.html"><a href="pandas.html#subsetting-data"><i class="fa fa-check"></i><b>3.17.2</b> Subsetting Data</a></li>
 <li class="chapter" data-level="3.17.3" data-path="pandas.html"><a href="pandas.html#boolean-indexing"><i class="fa fa-check"></i><b>3.17.3</b> Boolean Indexing</a></li>
+<li class="chapter" data-level="3.17.4" data-path="pandas.html"><a href="pandas.html#adding-columns"><i class="fa fa-check"></i><b>3.17.4</b> Adding Columns</a></li>
+<li class="chapter" data-level="3.17.5" data-path="pandas.html"><a href="pandas.html#adding-rows"><i class="fa fa-check"></i><b>3.17.5</b> Adding Rows</a></li>
+<li class="chapter" data-level="3.17.6" data-path="pandas.html"><a href="pandas.html#loopting-through-pandas-dataframes"><i class="fa fa-check"></i><b>3.17.6</b> Loopting Through Pandas DataFrames</a></li>
 </ul></li>
 <li class="chapter" data-level="3.18" data-path="dictionaries.html"><a href="dictionaries.html"><i class="fa fa-check"></i><b>3.18</b> Dictionaries</a>
 <ul>
@@ -302,11 +305,29 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <p>For example: let’s say that we want to subset our data just to the Virginica species.</p>
 <p>We can first check which rows in the <code>Species</code> column contain the string <code>virginica</code>:</p>
 <div class="sourceCode" id="cb159"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb159-1"><a href="pandas.html#cb159-1" aria-hidden="true" tabindex="-1"></a>iris.loc[:, <span class="st">&#39;Species&#39;</span>] <span class="op">==</span> <span class="st">&#39;virginica&#39;</span> </span></code></pre></div>
+<p><img src="img/subset4.png" title="Iris dataset, subsetted" alt="Iris dataset, subsetted" style="display: block; margin: auto;" /></p>
 <p>We can now subset this just rows where the above is true like so:</p>
 <div class="sourceCode" id="cb160"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb160-1"><a href="pandas.html#cb160-1" aria-hidden="true" tabindex="-1"></a>iris.loc[iris.loc[:, <span class="st">&#39;Species&#39;</span>] <span class="op">==</span> <span class="st">&#39;virginica&#39;</span>, :]</span></code></pre></div>
-<p>If the above looks cumbersome and hard to read (which it is), you can break it up into multiple rows for legibility:</p>
+<p>or if the above looks cumbersome and hard to read (which it is), you can break it up into multiple rows for legibility:</p>
 <div class="sourceCode" id="cb161"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb161-1"><a href="pandas.html#cb161-1" aria-hidden="true" tabindex="-1"></a>virginicaRows <span class="op">=</span> iris.loc[:, <span class="st">&#39;Species&#39;</span>] <span class="op">==</span> <span class="st">&#39;virginica&#39;</span></span>
 <span id="cb161-2"><a href="pandas.html#cb161-2" aria-hidden="true" tabindex="-1"></a>iris.loc[virginicaRows, :]</span></code></pre></div>
+<p><img src="img/subset5.png" title="Iris dataset, subsetted" alt="Iris dataset, subsetted" style="display: block; margin: auto;" /></p>
+</div>
+<div id="adding-columns" class="section level3" number="3.17.4">
+<h3><span class="header-section-number">3.17.4</span> Adding Columns</h3>
+<p>We can add a new column to our DataFrame by using the following notation:</p>
+<div class="sourceCode" id="cb162"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb162-1"><a href="pandas.html#cb162-1" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>dataFrame<span class="op">&gt;</span>.loc[:, <span class="op">&lt;</span>columnName<span class="op">&gt;</span>] <span class="op">=</span> <span class="op">&lt;</span>data<span class="op">&gt;</span></span></code></pre></div>
+<p><code>&lt;data&gt;</code> can be a list of values that you provide, or it can be a modification of an existing column. For example, if we wanted to add double the petal width, we could do so as such:</p>
+<div class="sourceCode" id="cb163"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb163-1"><a href="pandas.html#cb163-1" aria-hidden="true" tabindex="-1"></a>iris.loc[:, <span class="st">&#39;Petal.Width.Doubled&#39;</span>] <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> iris.loc[:, <span class="st">&#39;Petal.Width&#39;</span>]</span>
+<span id="cb163-2"><a href="pandas.html#cb163-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(iris)</span></code></pre></div>
+<p><img src="img/subset5.png" title="Iris dataset, new col" alt="Iris dataset, new col" style="display: block; margin: auto;" /></p>
+</div>
+<div id="adding-rows" class="section level3" number="3.17.5">
+<h3><span class="header-section-number">3.17.5</span> Adding Rows</h3>
+<p>We can use a similar notation to add a new row. Here, we instead provide <code>pandas</code> with a new index:</p>
+</div>
+<div id="loopting-through-pandas-dataframes" class="section level3" number="3.17.6">
+<h3><span class="header-section-number">3.17.6</span> Loopting Through Pandas DataFrames</h3>
 
 </div>
 </div>
