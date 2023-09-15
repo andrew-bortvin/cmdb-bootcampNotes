@@ -67,6 +67,8 @@ figure-aesthetics
 histograms
 pandas
 importing-data
+subsetting-data
+boolean-indexing
 dictionaries
 looking-up-values
 adding-to-a-dictionary

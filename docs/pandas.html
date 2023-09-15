@@ -218,7 +218,9 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="3.17" data-path="pandas.html"><a href="pandas.html"><i class="fa fa-check"></i><b>3.17</b> Pandas</a>
 <ul>
-<li class="chapter" data-level="3.17.1" data-path="pandas.html"><a href="pandas.html#importing-data"><i class="fa fa-check"></i><b>3.17.1</b> Importing data</a></li>
+<li class="chapter" data-level="3.17.1" data-path="pandas.html"><a href="pandas.html#importing-data"><i class="fa fa-check"></i><b>3.17.1</b> Importing Data</a></li>
+<li class="chapter" data-level="3.17.2" data-path="pandas.html"><a href="pandas.html#subsetting-data"><i class="fa fa-check"></i><b>3.17.2</b> Subsetting Data</a></li>
+<li class="chapter" data-level="3.17.3" data-path="pandas.html"><a href="pandas.html#boolean-indexing"><i class="fa fa-check"></i><b>3.17.3</b> Boolean Indexing</a></li>
 </ul></li>
 <li class="chapter" data-level="3.18" data-path="dictionaries.html"><a href="dictionaries.html"><i class="fa fa-check"></i><b>3.18</b> Dictionaries</a>
 <ul>
@@ -267,14 +269,35 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <li>In the leftmost column, we have the <strong>indices</strong>, which are the row names of our DataFrame. Here, the indices are the integer row numbers.</li>
 <li>In the top row, we have the <strong>column names</strong> of our dataframe.</li>
 </ul>
+<p>Also note that the <code>Species</code> column consists of strings, while the other columns consist of numeric values. Datasets that mix data types like this are where <code>pandas</code> is best used.</p>
 <div id="importing-data" class="section level3" number="3.17.1">
-<h3><span class="header-section-number">3.17.1</span> Importing data</h3>
+<h3><span class="header-section-number">3.17.1</span> Importing Data</h3>
 <p>The key function we will use to import data is <code>pd.read_csv()</code>. The only required argument to this function is the name of the file you are trying to import, and by default <code>pandas</code> will do a lot ot infer the appropriate settings to correctly read in your data. However, it doesn’t always get things right, especially for more complicated datasets. Some useful arguments that can control how your file is imported are:</p>
 <ul>
 <li><code>sep</code> - a string which separates values. By default, <code>,</code>.</li>
 <li><code>header</code> - the row number in your data that contains the header. The header is used to infer column names.</li>
-<li><code>names</code> - in the case that</li>
+<li><code>names</code> - this argument allows you to explicitly provide the names of your columns</li>
+<li><code>index_col</code> - the column which provides the index</li>
+<li><code>usecols</code> - if you only want to read in a subset of your data, this argument lets you specify which columns to use</li>
 </ul>
+<p>The <code>iris</code> dataset pictured above is nicely formatted for import with <code>pandas</code>; it can be read in with a simple comand of:</p>
+<div class="sourceCode" id="cb155"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb155-1"><a href="pandas.html#cb155-1" aria-hidden="true" tabindex="-1"></a>iris <span class="op">=</span> pd.read_csv(<span class="st">&#39;iris.csv&#39;</span>)</span></code></pre></div>
+</div>
+<div id="subsetting-data" class="section level3" number="3.17.2">
+<h3><span class="header-section-number">3.17.2</span> Subsetting Data</h3>
+<p>To subset <code>pandas</code> DataFrames, we use the syntax: <code>&lt;DataFrameName&gt;.loc[&lt;rows&gt;, &lt;columns&gt;]</code></p>
+<p>For example, if we want to find the petal width of the plant in the fifth row, we use the following notation:</p>
+<div class="sourceCode" id="cb156"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb156-1"><a href="pandas.html#cb156-1" aria-hidden="true" tabindex="-1"></a>iris.loc[<span class="dv">4</span>, <span class="st">&#39;Petal.Width&#39;</span>]</span></code></pre></div>
+<p><img src="img/subset1" title="Iris dataset, subsetted" alt="Iris dataset, subsetted" style="display: block; margin: auto;" /></p>
+<p>As with lists, we can use a colon to indicate a range of values that we want to subset:</p>
+<div class="sourceCode" id="cb157"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb157-1"><a href="pandas.html#cb157-1" aria-hidden="true" tabindex="-1"></a>iris.loc[<span class="dv">18</span>:<span class="dv">22</span>, <span class="st">&#39;Sepal.Width&#39;</span>]</span></code></pre></div>
+<p><img src="img/subset2" title="Iris dataset, subsetted" alt="Iris dataset, subsetted" style="display: block; margin: auto;" /></p>
+<p>Also as with lists, leaving one side of the colon blank indicates that we want to index to the start/end of the data structure. Therefore, the following notation extracts an entire column:</p>
+<div class="sourceCode" id="cb158"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb158-1"><a href="pandas.html#cb158-1" aria-hidden="true" tabindex="-1"></a>iris.loc[:, <span class="st">&#39;Species&#39;</span>]</span></code></pre></div>
+<p><img src="img/subset3" title="Iris dataset, subsetted" alt="Iris dataset, subsetted" style="display: block; margin: auto;" /></p>
+</div>
+<div id="boolean-indexing" class="section level3" number="3.17.3">
+<h3><span class="header-section-number">3.17.3</span> Boolean Indexing</h3>
 
 </div>
 </div>
