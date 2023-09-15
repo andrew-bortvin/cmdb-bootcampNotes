@@ -288,13 +288,13 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <p>To subset <code>pandas</code> DataFrames, we use the syntax: <code>&lt;DataFrameName&gt;.loc[&lt;rows&gt;, &lt;columns&gt;]</code></p>
 <p>For example, if we want to find the petal width of the plant in the fifth row, we use the following notation:</p>
 <div class="sourceCode" id="cb156"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb156-1"><a href="pandas.html#cb156-1" aria-hidden="true" tabindex="-1"></a>iris.loc[<span class="dv">4</span>, <span class="st">&#39;Petal.Width&#39;</span>]</span></code></pre></div>
-<p><img src="img/subset1" title="Iris dataset, subsetted" alt="Iris dataset, subsetted" style="display: block; margin: auto;" /></p>
+<p><img src="img/subset1.png" title="Iris dataset, subsetted" alt="Iris dataset, subsetted" style="display: block; margin: auto;" /></p>
 <p>As with lists, we can use a colon to indicate a range of values that we want to subset:</p>
 <div class="sourceCode" id="cb157"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb157-1"><a href="pandas.html#cb157-1" aria-hidden="true" tabindex="-1"></a>iris.loc[<span class="dv">18</span>:<span class="dv">22</span>, <span class="st">&#39;Sepal.Width&#39;</span>]</span></code></pre></div>
-<p><img src="img/subset2" title="Iris dataset, subsetted" alt="Iris dataset, subsetted" style="display: block; margin: auto;" /></p>
+<p><img src="img/subset2.png" title="Iris dataset, subsetted" alt="Iris dataset, subsetted" style="display: block; margin: auto;" /></p>
 <p>Also as with lists, leaving one side of the colon blank indicates that we want to index to the start/end of the data structure. Therefore, the following notation extracts an entire column:</p>
 <div class="sourceCode" id="cb158"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb158-1"><a href="pandas.html#cb158-1" aria-hidden="true" tabindex="-1"></a>iris.loc[:, <span class="st">&#39;Species&#39;</span>]</span></code></pre></div>
-<p><img src="img/subset3" title="Iris dataset, subsetted" alt="Iris dataset, subsetted" style="display: block; margin: auto;" /></p>
+<p><img src="img/subset3.png" title="Iris dataset, subsetted" alt="Iris dataset, subsetted" style="display: block; margin: auto;" /></p>
 </div>
 <div id="boolean-indexing" class="section level3" number="3.17.3">
 <h3><span class="header-section-number">3.17.3</span> Boolean Indexing</h3>
