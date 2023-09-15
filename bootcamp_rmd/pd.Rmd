@@ -77,9 +77,18 @@ We can first check which rows in the `Species` column contain the string `virgin
 iris.loc[:, 'Species'] == 'virginica' 
 ``` 
 
+We can now subset this just rows where the above is true like so: 
 
+```{r, engine='python', eval = FALSE}
+iris.loc[iris.loc[:, 'Species'] == 'virginica', :]
+``` 
 
+If the above looks cumbersome and hard to read (which it is), you can break it up into multiple rows for legibility:
 
+```{r, engine='python', eval = FALSE}
+virginicaRows = iris.loc[:, 'Species'] == 'virginica'
+iris.loc[virginicaRows, :]
+``` 
 
 
 
