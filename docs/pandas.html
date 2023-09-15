@@ -302,6 +302,11 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <p>For example: let’s say that we want to subset our data just to the Virginica species.</p>
 <p>We can first check which rows in the <code>Species</code> column contain the string <code>virginica</code>:</p>
 <div class="sourceCode" id="cb159"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb159-1"><a href="pandas.html#cb159-1" aria-hidden="true" tabindex="-1"></a>iris.loc[:, <span class="st">&#39;Species&#39;</span>] <span class="op">==</span> <span class="st">&#39;virginica&#39;</span> </span></code></pre></div>
+<p>We can now subset this just rows where the above is true like so:</p>
+<div class="sourceCode" id="cb160"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb160-1"><a href="pandas.html#cb160-1" aria-hidden="true" tabindex="-1"></a>iris.loc[iris.loc[:, <span class="st">&#39;Species&#39;</span>] <span class="op">==</span> <span class="st">&#39;virginica&#39;</span>, :]</span></code></pre></div>
+<p>If the above looks cumbersome and hard to read (which it is), you can break it up into multiple rows for legibility:</p>
+<div class="sourceCode" id="cb161"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb161-1"><a href="pandas.html#cb161-1" aria-hidden="true" tabindex="-1"></a>virginicaRows <span class="op">=</span> iris.loc[:, <span class="st">&#39;Species&#39;</span>] <span class="op">==</span> <span class="st">&#39;virginica&#39;</span></span>
+<span id="cb161-2"><a href="pandas.html#cb161-2" aria-hidden="true" tabindex="-1"></a>iris.loc[virginicaRows, :]</span></code></pre></div>
 
 </div>
 </div>
