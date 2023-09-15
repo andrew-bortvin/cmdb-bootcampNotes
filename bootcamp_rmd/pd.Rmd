@@ -1,0 +1,103 @@
+```{r, include = FALSE}
+ottrpal::set_knitr_image_path()
+```
+
+## Pandas
+
+Along with `numpy`, `pandas` is one of the most common Python libraries for working with tabular data. Where `numpy` is optimized for working for matrices of numerical data and rapid mathematical operations, `pandas` is designed for **manipulating and reshaping tables that contain multiple data types**. As with other packages, it is conventional to import pandas with a shortened name, as:
+
+```{r, engine='python', eval=FALSE}
+pd.read_csv()
+```
+
+The most important data type that we use in `pandas` is the DataFrame, which is a two-dimensional data structure. A typical DataFrame looks like this: 
+
+<img src="img/iris.png" title="Iris dataset" alt="Iris dataset." style="display: block; margin: auto;" />
+
+### Importing data 
+
+The key function we will use to import data is `pd.read_csv()`. The only required argument to this function is the name of the file you are trying to import, and by default `pandas` will do a lot ot infer the appropriate settings to correctly read in your data. However, it doesn't always get things right, especially for more complicated datasets. Some useful arguments that can control how your file is imported are:
+
+* `sep` - a string which separates values. By default, `,`.
+* `header`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
