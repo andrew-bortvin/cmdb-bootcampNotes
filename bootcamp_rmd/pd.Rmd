@@ -122,8 +122,6 @@ print(iris)
 
 <img src="img/newRow.png" title="Iris dataset, new row" alt="Iris dataset, new row" style="display: block; margin: auto;" />
 
-### Looping Through Pandas DataFrames
-
 
 
 
