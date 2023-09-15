@@ -71,7 +71,6 @@ subsetting-data
 boolean-indexing
 adding-columns
 adding-rows
-looping-through-pandas-dataframes
 dictionaries
 looking-up-values
 adding-to-a-dictionary
