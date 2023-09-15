@@ -67,6 +67,17 @@ iris.loc[:, 'Species']
 
 ### Boolean Indexing
 
+`pandas` DataFrames present a new way of subsetting data: Boolean indexing. Boolean indexing refers to taking a vector of `True` or `False` values that is equal in size to one of the dimensions of your DataFrame and subsetting your data to only elements in `True` positions.
+
+For example: let's say that we want to subset our data just to the Virginica species. 
+
+We can first check which rows in the `Species` column contain the string `virginica`: 
+
+```{r, engine='python', eval = FALSE}
+iris.loc[:, 'Species'] == 'virginica' 
+``` 
+
+
 
 
 
